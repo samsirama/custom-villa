@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sewa Villa Custom Mewah dan Eksklusif. Nikmati pengalaman menginap dengan fasilitas premium, pemandangan indah, dan kenyamanan tanpa batas.">
+    <meta name="keywords" content="villa mewah, sewa villa, villa custom, penginapan eksklusif, liburan keluarga">
+    <meta name="author" content="Villa Custom">
+    <title>Villa Custom | Penginapan Mewah & Eksklusif</title>
+
+    <!-- Google Fonts: Playfair Display (Elegant) & Inter (Modern) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration & Custom CSS -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#d4af37',
+                        goldHover: '#b5952f',
+                        darkBg: '#0f172a',
+                        darkCard: '#1e293b'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered delays for items side by side */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+
+        /* Zoom reveal effect */
+        .reveal-zoom {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-zoom.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Hover Image Effect */
+        .img-hover-zoom {
+            overflow: hidden;
+        }
+        .img-hover-zoom img {
+            transition: transform 0.7s ease;
+        }
+        .img-hover-zoom:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Navbar Scrolled State */
+        .nav-scrolled {
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Custom Button Hover */
+        .btn-gold {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-gold::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+        .btn-gold:hover::before {
+            left: 100%;
+        }
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px -10px #d4af37;
+        }
+
+        /* Hero Parallax Overlay */
+        .hero-overlay {
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 1));
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-slate-200 font-sans antialiased overflow-x-hidden">
+
+    <!-- Header & Navigation -->
+    <header>
+        <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center bg-transparent">
+            <a href="#" class="font-serif text-2xl md:text-3xl font-bold tracking-wider text-white">
+                VILLA <span class="text-gold">CUSTOM</span>
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#beranda" class="text-sm uppercase tracking-widest hover:text-gold transition duration-300">Beranda</a>
+                <a href="#tentang" class="text-sm uppercase tracking-widest hover:text-gold transition duration-300">Tentang</a>
+                <a href="#fasilitas" class="text-sm uppercase tracking-widest hover:text-gold transition duration-300">Fasilitas</a>
+                <a href="#galeri" class="text-sm uppercase tracking-widest hover:text-gold transition duration-300">Galeri</a>
+                <a href="https://wa.me/6281234567890" target="_blank" class="btn-gold bg-gold text-darkBg px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">
+                    Pesan Sekarang
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-2xl text-gold focus:outline-none" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobileMenu" class="fixed inset-0 bg-darkBg z-40 flex flex-col items-center justify-center space-y-8 transform translate-x-full transition-transform duration-300 md:hidden">
+            <button class="absolute top-6 right-6 text-3xl text-gold focus:outline-none" onclick="toggleMobileMenu()">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#beranda" onclick="toggleMobileMenu()" class="text-2xl font-serif hover:text-gold transition">Beranda</a>
+            <a href="#tentang" onclick="toggleMobileMenu()" class="text-2xl font-serif hover:text-gold transition">Tentang</a>
+            <a href="#fasilitas" onclick="toggleMobileMenu()" class="text-2xl font-serif hover:text-gold transition">Fasilitas</a>
+            <a href="#galeri" onclick="toggleMobileMenu()" class="text-2xl font-serif hover:text-gold transition">Galeri</a>
+            <a href="https://wa.me/6281234567890" target="_blank" class="bg-gold text-darkBg px-8 py-3 rounded-full text-lg font-semibold mt-4">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="beranda" class="relative h-screen flex items-center justify-center">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://images.unsplash.com/photo-1613490908571-9ce2249b49be?q=80&w=2070&auto=format&fit=crop" alt="Villa Mewah" class="w-full h-full object-cover object-center" />
+                <div class="absolute inset-0 hero-overlay"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+                <p class="reveal text-gold tracking-[0.3em] uppercase text-sm md:text-base mb-4 font-semibold">Selamat Datang di Surga Tersembunyi</p>
+                <h1 class="reveal delay-100 font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
+                    Kemewahan <br><span class="text-gold italic font-light">Tanpa Batas</span>
+                </h1>
+                <p class="reveal delay-200 text-slate-300 text-lg md:text-xl mb-10 font-light max-w-2xl mx-auto">
+                    Rasakan pengalaman menginap eksklusif di villa custom kami yang didesain khusus untuk ketenangan dan kenyamanan Anda.
+                </p>
+                <div class="reveal delay-300 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#tentang" class="btn-gold border border-gold text-gold hover:bg-gold hover:text-darkBg px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-widest">
+                        Jelajahi Villa
+                    </a>
+                    <a href="https://wa.me/6281234567890" target="_blank" class="btn-gold bg-gold text-darkBg border border-gold px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-widest flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-lg"></i> Reservasi
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="tentang" class="py-24 px-6 md:px-12 max-w-7xl mx-auto bg-darkBg">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Image -->
+                <div class="w-full lg:w-1/2 reveal-zoom">
+                    <div class="relative img-hover-zoom rounded-2xl shadow-2xl">
+                        <div class="absolute inset-0 border-2 border-gold rounded-2xl transform translate-x-4 translate-y-4 -z-10"></div>
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" alt="Interior Villa" class="w-full h-auto rounded-2xl z-10 relative">
+                    </div>
+                </div>
+                <!-- Text -->
+                <div class="w-full lg:w-1/2">
+                    <div class="flex items-center gap-4 mb-4 reveal">
+                        <div class="h-[1px] w-12 bg-gold"></div>
+                        <span class="text-gold tracking-[0.2em] uppercase text-sm">Tentang Kami</span>
+                    </div>
+                    <h2 class="reveal font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
+                        Desain Custom Untuk <span class="text-gold italic">Kenyamanan Anda</span>
+                    </h2>
+                    <p class="reveal text-slate-400 leading-relaxed mb-6">
+                        Villa Custom memadukan arsitektur modern dengan sentuhan alam tropis yang menenangkan. Setiap sudut dirancang dengan teliti untuk memberikan pengalaman visual dan kenyamanan maksimal bagi Anda dan keluarga.
+                    </p>
+                    <p class="reveal text-slate-400 leading-relaxed mb-8">
+                        Dilengkapi dengan *private pool*, interior premium, dan pelayanan setara hotel bintang 5, kami memastikan liburan Anda menjadi momen yang tak terlupakan.
+                    </p>
+                    <a href="https://instagram.com/your_instagram" target="_blank" class="reveal btn-gold inline-flex items-center gap-2 text-gold hover:text-white transition">
+                        <span>Lihat cerita kami di Instagram</span>
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section id="fasilitas" class="py-24 px-6 md:px-12 bg-darkCard">
+            <div class="max-w-7xl mx-auto text-center mb-16">
+                <p class="reveal text-gold tracking-[0.2em] uppercase text-sm mb-2">Fasilitas Premium</p>
+                <h2 class="reveal font-serif text-4xl md:text-5xl text-white">Layanan Eksklusif Kami</h2>
+            </div>
+
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1 -->
+                <div class="reveal delay-100 bg-darkBg p-8 rounded-2xl border border-slate-700 hover:border-gold transition duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-gold transition duration-300">
+                        <i class="fas fa-swimming-pool text-3xl text-gold group-hover:text-darkBg transition"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">Private Pool</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Kolam renang pribadi dengan air hangat dan area bersantai yang luas.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="reveal delay-200 bg-darkBg p-8 rounded-2xl border border-slate-700 hover:border-gold transition duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-gold transition duration-300">
+                        <i class="fas fa-utensils text-3xl text-gold group-hover:text-darkBg transition"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">Dapur Modern</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Fasilitas dapur lengkap dengan peralatan memasak berstandar internasional.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="reveal delay-300 bg-darkBg p-8 rounded-2xl border border-slate-700 hover:border-gold transition duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-gold transition duration-300">
+                        <i class="fas fa-wifi text-3xl text-gold group-hover:text-darkBg transition"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">High-Speed WiFi</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Koneksi internet super cepat di seluruh area villa untuk kebutuhan Anda.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="reveal delay-100 bg-darkBg p-8 rounded-2xl border border-slate-700 hover:border-gold transition duration-300 transform hover:-translate-y-2 group">
+                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-gold transition duration-300">
+                        <i class="fas fa-spa text-3xl text-gold group-hover:text-darkBg transition"></i>
+                    </div>
+                    <h3 class="text-xl font-serif text-white mb-3">Layanan Spa</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Layanan pijat dan spa panggilan untuk relaksasi maksimal selama liburan.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="galeri" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <p class="reveal text-gold tracking-[0.2em] uppercase text-sm mb-2">Galeri Foto</p>
+                <h2 class="reveal font-serif text-4xl md:text-5xl text-white">Menangkap Keindahan</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="reveal img-hover-zoom rounded-xl h-64">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl" alt="Galeri 1">
+                </div>
+                <div class="reveal delay-100 img-hover-zoom rounded-xl h-64 lg:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl" alt="Galeri 2">
+                </div>
+                <div class="reveal delay-200 img-hover-zoom rounded-xl h-64 lg:col-span-2">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl" alt="Galeri 3">
+                </div>
+                <div class="reveal delay-300 img-hover-zoom rounded-xl h-64">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09be1587?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl" alt="Galeri 4">
+                </div>
+            </div>
+        </section>
+
+        <!-- Links & Contact Section -->
+        <section id="kontak" class="py-24 bg-darkCard relative overflow-hidden">
+            <!-- Decorative circle -->
+            <div class="absolute top-0 right-0 w-64 h-64 bg-gold rounded-full blur-[120px] opacity-20"></div>
+            <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-500 rounded-full blur-[150px] opacity-10"></div>
+
+            <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+                <div class="flex flex-col lg:flex-row gap-16 bg-darkBg p-8 md:p-12 rounded-3xl border border-slate-700 shadow-2xl">
+                    <!-- Text Info -->
+                    <div class="w-full lg:w-1/2">
+                        <h2 class="reveal font-serif text-3xl md:text-4xl text-white mb-6">Siap Untuk Liburan Impian?</h2>
+                        <p class="reveal text-slate-400 mb-8">Hubungi kami melalui WhatsApp untuk ketersediaan tanggal dan dapatkan penawaran harga terbaik. Ikuti juga Instagram kami untuk update terbaru.</p>
+                        
+                        <div class="flex flex-col space-y-4">
+                            <!-- WhatsApp Link -->
+                            <a href="https://wa.me/6281234567890" target="_blank" class="reveal btn-gold flex items-center gap-4 bg-green-600 hover:bg-green-700 text-white p-4 rounded-xl transition w-full md:w-max">
+                                <i class="fab fa-whatsapp text-3xl"></i>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-wider opacity-80">Chat Langsung</span>
+                                    <span class="font-semibold text-lg">WhatsApp Kami</span>
+                                </div>
+                            </a>
+                            <!-- Instagram Link -->
+                            <a href="https://instagram.com/your_instagram" target="_blank" class="reveal delay-100 btn-gold flex items-center gap-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white p-4 rounded-xl transition w-full md:w-max">
+                                <i class="fab fa-instagram text-3xl"></i>
+                                <div>
+                                    <span class="block text-xs uppercase tracking-wider opacity-80">Ikuti Kami</span>
+                                    <span class="font-semibold text-lg">@VillaCustom_Mewah</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Google Maps Embed -->
+                    <div class="w-full lg:w-1/2 reveal delay-200">
+                        <div class="w-full h-full min-h-[300px] rounded-2xl overflow-hidden border border-slate-700 shadow-lg relative group">
+                            <!-- Placeholder Map (Ganti URL src dengan iframe embed Google Maps asli Anda) -->
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347863118!2d107.5731165!3d-6.9034443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0; min-height: 350px; filter: grayscale(50%) contrast(1.2);" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                            
+                            <!-- Overlay Link ke Aplikasi Google Maps -->
+                            <a href="https://maps.google.com/?q=Bandung" target="_blank" class="absolute inset-0 bg-darkBg/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
+                                <span class="bg-gold text-darkBg px-6 py-3 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition duration-300">
+                                    <i class="fas fa-map-marker-alt"></i> Buka di Google Maps
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <a href="#" class="font-serif text-2xl font-bold tracking-wider text-white mb-4 block">
+                    VILLA <span class="text-gold">CUSTOM</span>
+                </a>
+                <p class="text-slate-500 text-sm leading-relaxed max-w-xs">
+                    Pengalaman liburan mewah dengan fasilitas kelas atas dan pelayanan profesional di lokasi strategis dan asri.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4 tracking-wider uppercase text-sm">Tautan Cepat</h4>
+                <ul class="space-y-2">
+                    <li><a href="#beranda" class="text-slate-400 hover:text-gold transition text-sm">Beranda</a></li>
+                    <li><a href="#tentang" class="text-slate-400 hover:text-gold transition text-sm">Tentang Kami</a></li>
+                    <li><a href="#fasilitas" class="text-slate-400 hover:text-gold transition text-sm">Fasilitas</a></li>
+                    <li><a href="#galeri" class="text-slate-400 hover:text-gold transition text-sm">Galeri</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4 tracking-wider uppercase text-sm">Kontak Kami</h4>
+                <p class="text-slate-400 text-sm mb-2"><i class="fas fa-map-marker-alt text-gold w-5"></i> Jl. Raya Resort Mewah No. 1, Pegunungan</p>
+                <p class="text-slate-400 text-sm mb-2"><i class="fas fa-phone text-gold w-5"></i> +62 812 3456 7890</p>
+                <p class="text-slate-400 text-sm mb-4"><i class="fas fa-envelope text-gold w-5"></i> info@villacustom.com</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-slate-800 text-center text-slate-600 text-sm flex flex-col md:flex-row justify-between items-center">
+            <p>&copy; 2026 Villa Custom. All rights reserved.</p>
+            <div class="flex space-x-4 mt-4 md:mt-0">
+                <a href="#" class="hover:text-gold transition text-lg"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-gold transition text-lg"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-gold transition text-lg"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Animations and Interactions -->
+    <script>
+        // Navbar Scrolled Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
+            }
+        });
+
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('translate-x-full');
+        }
+
+        // Intersection Observer for Scroll Animations
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15 // Trigger when 15% of element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        // Optional: stop observing once animated
+                        // observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            // Select all elements to animate
+            const revealElements = document.querySelectorAll('.reveal, .reveal-zoom');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
