@@ -285,25 +285,10 @@
           </a>
         </div>
 
-        <!-- Nav 03: Joglo Ageng Detail -->
-        <div class="nav-stagger-item">
-          <a href="detail-unit.html" data-nav-item="detail-unit.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">03</span>
-            <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
-              <span class="lang-id">Joglo Ageng (Detail)</span>
-              <span class="lang-en">Joglo Ageng (Suite)</span>
-            </span>
-            <span class="nav-active-badge hidden text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
-              <span class="lang-id">Sedang Dilihat</span>
-              <span class="lang-en">Active</span>
-            </span>
-          </a>
-        </div>
-
-        <!-- Nav 04: Filosofi Kayu Jati -->
+        <!-- Nav 03: Filosofi Kayu Jati -->
         <div class="nav-stagger-item">
           <a href="index.html#filosofi" data-nav-item="filosofi" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">04</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">03</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Filosofi Kayu Jati</span>
               <span class="lang-en">Teak Philosophy</span>
@@ -315,10 +300,10 @@
           </a>
         </div>
 
-        <!-- Nav 05: Pengalaman Menginap -->
+        <!-- Nav 04: Pengalaman Menginap -->
         <div class="nav-stagger-item">
           <a href="index.html#pengalaman" data-nav-item="pengalaman" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">05</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">04</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Pengalaman Menginap</span>
               <span class="lang-en">Experiences</span>
@@ -402,26 +387,41 @@
 
     <!-- Filter & Categories Bar -->
     <section class="flex flex-wrap items-center justify-center gap-2.5 mb-12 sm:mb-16" aria-label="Filter Kategori Unit" data-aos="fade-up" data-aos-delay="100">
-      <span class="px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium bg-stone-900 text-white dark:bg-brass dark:text-stone-950 rounded-full cursor-pointer shadow-sm">
+      <button 
+        type="button" 
+        data-unit-filter="all" 
+        class="filter-tab-btn active px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium bg-stone-900 text-white dark:bg-brass dark:text-stone-950 rounded-full cursor-pointer shadow-sm transition-all duration-300 border border-transparent">
         <span class="lang-id">Semua Koleksi (4)</span>
         <span class="lang-en">All Suites (4)</span>
-      </span>
-      <span class="px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-600 dark:text-stone-300 hover:text-brass rounded-full cursor-pointer transition-colors">
-        Private Pool (2)
-      </span>
-      <span class="px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-600 dark:text-stone-300 hover:text-brass rounded-full cursor-pointer transition-colors">
-        Honeymoon Sanctuary (2)
-      </span>
-      <span class="px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-600 dark:text-stone-300 hover:text-brass rounded-full cursor-pointer transition-colors">
-        Family Villa (1)
-      </span>
+      </button>
+      <button 
+        type="button" 
+        data-unit-filter="private-pool" 
+        class="filter-tab-btn px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-600 dark:text-stone-300 hover:text-brass rounded-full cursor-pointer transition-all duration-300 bg-transparent">
+        <span class="lang-id">Private Pool (2)</span>
+        <span class="lang-en">Private Pool (2)</span>
+      </button>
+      <button 
+        type="button" 
+        data-unit-filter="honeymoon" 
+        class="filter-tab-btn px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-600 dark:text-stone-300 hover:text-brass rounded-full cursor-pointer transition-all duration-300 bg-transparent">
+        <span class="lang-id">Honeymoon Sanctuary (2)</span>
+        <span class="lang-en">Honeymoon Sanctuary (2)</span>
+      </button>
+      <button 
+        type="button" 
+        data-unit-filter="family" 
+        class="filter-tab-btn px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-600 dark:text-stone-300 hover:text-brass rounded-full cursor-pointer transition-all duration-300 bg-transparent">
+        <span class="lang-id">Family Villa (1)</span>
+        <span class="lang-en">Family Villa (1)</span>
+      </button>
     </section>
 
     <!-- Units Minimalist Grid Layout -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
+    <div id="unitGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10 lg:gap-12">
 
       <!-- ================= UNIT 1: JOGLO AGENG ================= -->
-      <article class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up">
+      <article data-unit-category="private-pool" class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up">
         <div>
           <!-- Image Container -->
           <div class="relative h-[280px] sm:h-[360px] md:h-[420px] overflow-hidden">
@@ -491,14 +491,14 @@
 
         <!-- Action Footer -->
         <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-t border-stone-100 dark:border-stone-800/40">
-          <a href="detail-unit.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors group">
+          <a href="stay/joglo-ageng.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors group">
             <span class="lang-id">Lihat Detail Lengkap</span>
             <span class="lang-en">View Full Details</span>
             <i class="fa-solid fa-arrow-right ml-1.5 text-xs group-hover:translate-x-1.5 transition-transform"></i>
           </a>
           <div class="flex items-center gap-2 shrink-0">
             <a 
-              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Ageng%20(Unit%20J1).%20(https://villajoglo.com/stay.html)" 
+              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Ageng%20(Unit%20J1).%20(https://villajoglo.com/stay/joglo-ageng.html)" 
               target="_blank" 
               rel="noopener noreferrer" 
               data-wa-unit-name="Joglo Ageng" 
@@ -509,7 +509,7 @@
               <i class="fa-brands fa-whatsapp text-sm"></i>
               <span><span class="lang-id">Tanya WA</span><span class="lang-en">Inquire WA</span></span>
             </a>
-            <a href="detail-unit.html#pesan" class="inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-all rounded-sm shadow-sm">
+            <a href="stay/joglo-ageng.html#pesan" class="inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-all rounded-sm shadow-sm">
               <span class="lang-id">Reservasi</span>
               <span class="lang-en">Reserve</span>
             </a>
@@ -518,7 +518,7 @@
       </article>
 
       <!-- ================= UNIT 2: JOGLO TIRTA ================= -->
-      <article class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+      <article data-unit-category="private-pool honeymoon" class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
         <div>
           <!-- Image Container -->
           <div class="relative h-[280px] sm:h-[360px] md:h-[420px] overflow-hidden">
@@ -588,14 +588,14 @@
 
         <!-- Action Footer -->
         <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-t border-stone-100 dark:border-stone-800/40">
-          <a href="detail-unit.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors group">
+          <a href="stay/joglo-tirta.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors group">
             <span class="lang-id">Lihat Detail Lengkap</span>
             <span class="lang-en">View Full Details</span>
             <i class="fa-solid fa-arrow-right ml-1.5 text-xs group-hover:translate-x-1.5 transition-transform"></i>
           </a>
           <div class="flex items-center gap-2 shrink-0">
             <a 
-              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Tirta%20(Unit%20J2).%20(https://villajoglo.com/stay.html)" 
+              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Tirta%20(Unit%20J2).%20(https://villajoglo.com/stay/joglo-tirta.html)" 
               target="_blank" 
               rel="noopener noreferrer" 
               data-wa-unit-name="Joglo Tirta" 
@@ -606,7 +606,7 @@
               <i class="fa-brands fa-whatsapp text-sm"></i>
               <span><span class="lang-id">Tanya WA</span><span class="lang-en">Inquire WA</span></span>
             </a>
-            <a href="detail-unit.html#pesan" class="inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-all rounded-sm shadow-sm">
+            <a href="stay/joglo-tirta.html#pesan" class="inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-all rounded-sm shadow-sm">
               <span class="lang-id">Reservasi</span>
               <span class="lang-en">Reserve</span>
             </a>
@@ -615,7 +615,7 @@
       </article>
 
       <!-- ================= UNIT 3: JOGLO SEKAR ================= -->
-      <article class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up">
+      <article data-unit-category="honeymoon" class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up">
         <div>
           <!-- Image Container -->
           <div class="relative h-[280px] sm:h-[360px] md:h-[420px] overflow-hidden">
@@ -685,14 +685,14 @@
 
         <!-- Action Footer -->
         <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-t border-stone-100 dark:border-stone-800/40">
-          <a href="detail-unit.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors group">
+          <a href="stay/joglo-sekar.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors group">
             <span class="lang-id">Lihat Detail Lengkap</span>
             <span class="lang-en">View Full Details</span>
             <i class="fa-solid fa-arrow-right ml-1.5 text-xs group-hover:translate-x-1.5 transition-transform"></i>
           </a>
           <div class="flex items-center gap-2 shrink-0">
             <a 
-              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Sekar%20(Unit%20J3).%20(https://villajoglo.com/stay.html)" 
+              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Sekar%20(Unit%20J3).%20(https://villajoglo.com/stay/joglo-sekar.html)" 
               target="_blank" 
               rel="noopener noreferrer" 
               data-wa-unit-name="Joglo Sekar" 
@@ -703,7 +703,7 @@
               <i class="fa-brands fa-whatsapp text-sm"></i>
               <span><span class="lang-id">Tanya WA</span><span class="lang-en">Inquire WA</span></span>
             </a>
-            <a href="detail-unit.html#pesan" class="inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-all rounded-sm shadow-sm">
+            <a href="stay/joglo-sekar.html#pesan" class="inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-all rounded-sm shadow-sm">
               <span class="lang-id">Reservasi</span>
               <span class="lang-en">Reserve</span>
             </a>
@@ -712,7 +712,7 @@
       </article>
 
       <!-- ================= UNIT 4: JOGLO LAWAS ================= -->
-      <article class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+      <article data-unit-category="family" class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
         <div>
           <!-- Image Container -->
           <div class="relative h-[280px] sm:h-[360px] md:h-[420px] overflow-hidden">
@@ -782,14 +782,14 @@
 
         <!-- Action Footer -->
         <div class="px-6 sm:px-8 pb-6 sm:pb-8 pt-3 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 border-t border-stone-100 dark:border-stone-800/40">
-          <a href="detail-unit.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors group">
+          <a href="stay/joglo-lawas.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors group">
             <span class="lang-id">Lihat Detail Lengkap</span>
             <span class="lang-en">View Full Details</span>
             <i class="fa-solid fa-arrow-right ml-1.5 text-xs group-hover:translate-x-1.5 transition-transform"></i>
           </a>
           <div class="flex items-center gap-2 shrink-0">
             <a 
-              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Lawas%20(Unit%20J4).%20(https://villajoglo.com/stay.html)" 
+              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Lawas%20(Unit%20J4).%20(https://villajoglo.com/stay/joglo-lawas.html)" 
               target="_blank" 
               rel="noopener noreferrer" 
               data-wa-unit-name="Joglo Lawas" 
@@ -800,7 +800,7 @@
               <i class="fa-brands fa-whatsapp text-sm"></i>
               <span><span class="lang-id">Tanya WA</span><span class="lang-en">Inquire WA</span></span>
             </a>
-            <a href="detail-unit.html#pesan" class="inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-all rounded-sm shadow-sm">
+            <a href="stay/joglo-lawas.html#pesan" class="inline-flex items-center px-4 py-2 text-xs uppercase tracking-[0.15em] bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-all rounded-sm shadow-sm">
               <span class="lang-id">Reservasi</span>
               <span class="lang-en">Reserve</span>
             </a>
@@ -906,7 +906,7 @@
         <ul class="space-y-2 text-xs text-stone-400">
           <li><a href="index.html" class="hover:text-brass transition-colors">Home</a></li>
           <li><a href="stay.html" class="hover:text-brass transition-colors font-medium text-brass">Villas & Suites</a></li>
-          <li><a href="detail-unit.html" class="hover:text-brass transition-colors">Joglo Ageng</a></li>
+          <li><a href="stay/joglo-ageng.html" class="hover:text-brass transition-colors">Joglo Ageng</a></li>
           <li><a href="index.html#filosofi" class="hover:text-brass transition-colors">Philosophy</a></li>
           <li><a href="index.html#pengalaman" class="hover:text-brass transition-colors">Experiences</a></li>
         </ul>
@@ -919,10 +919,10 @@
           <span class="lang-en">Villa Collection</span>
         </h4>
         <ul class="space-y-2 text-xs text-stone-400">
-          <li><a href="detail-unit.html" class="hover:text-brass transition-colors">Joglo Ageng (Master)</a></li>
-          <li><a href="stay.html" class="hover:text-brass transition-colors">Joglo Tirta (Water)</a></li>
-          <li><a href="stay.html" class="hover:text-brass transition-colors">Joglo Sekar (Garden)</a></li>
-          <li><a href="stay.html" class="hover:text-brass transition-colors">Joglo Lawas (Family)</a></li>
+          <li><a href="stay/joglo-ageng.html" class="hover:text-brass transition-colors">Joglo Ageng (Master)</a></li>
+          <li><a href="stay/joglo-tirta.html" class="hover:text-brass transition-colors">Joglo Tirta (Water)</a></li>
+          <li><a href="stay/joglo-sekar.html" class="hover:text-brass transition-colors">Joglo Sekar (Garden)</a></li>
+          <li><a href="stay/joglo-lawas.html" class="hover:text-brass transition-colors">Joglo Lawas (Family)</a></li>
         </ul>
       </div>
 

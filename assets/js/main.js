@@ -121,7 +121,7 @@
     const currentLang = document.documentElement.getAttribute('lang') || 'id';
     const waPhone = '6281234567890';
 
-    // 1. Update all unit cards with data-wa-unit-name attribute (in stay.html, index.html, detail-unit.html)
+    // 1. Update all unit cards with data-wa-unit-name attribute (in stay.html, index.html, detail-unit.html, stay/*.html)
     const unitWaButtons = document.querySelectorAll('[data-wa-unit-name]');
     unitWaButtons.forEach((btn) => {
       const unitName = btn.getAttribute('data-wa-unit-name');
@@ -139,7 +139,7 @@
       btn.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
     });
 
-    // 2. Update Detail Unit Booking Form (on detail-unit.html)
+    // 2. Update Detail Unit Booking Form (on detail-unit.html and all stay/*.html pages)
     const waBookingBtn = document.getElementById('waBookingBtn');
     if (waBookingBtn) {
       const unitTitleEl = document.getElementById('unitDetailTitle');
@@ -147,17 +147,19 @@
       const checkoutInput = document.getElementById('bookCheckout');
       const guestsSelect = document.getElementById('bookGuests');
 
-      const unitName = unitTitleEl ? unitTitleEl.textContent.trim() : 'Joglo Ageng';
+      const unitName = waBookingBtn.getAttribute('data-wa-unit-name') || (unitTitleEl ? unitTitleEl.textContent.trim() : 'Joglo Ageng');
+      const unitCode = waBookingBtn.getAttribute('data-wa-unit-code') || 'Unit J1';
+      const unitLabel = unitCode ? `${unitName} (${unitCode})` : unitName;
       const checkinVal = checkinInput && checkinInput.value ? checkinInput.value : '';
       const checkoutVal = checkoutInput && checkoutInput.value ? checkoutInput.value : '';
       const guestsVal = guestsSelect ? guestsSelect.value : '2 Tamu Dewasa';
-      const refUrl = window.location.href.split('#')[0] || 'https://villajoglo.com/detail-unit.html';
+      const refUrl = window.location.href.split('#')[0] || 'https://villajoglo.com/stay/joglo-ageng.html';
 
       let msg = '';
       if (currentLang === 'en') {
-        msg = `Hello Villa Joglo, I would like to inquire further about ${unitName} (Unit J1). (${refUrl})\n\n• Check-in: ${checkinVal || 'TBD'}\n• Check-out: ${checkoutVal || 'TBD'}\n• Guests: ${guestsVal}`;
+        msg = `Hello Villa Joglo, I would like to inquire further about ${unitLabel}. (${refUrl})\n\n• Check-in: ${checkinVal || 'TBD'}\n• Check-out: ${checkoutVal || 'TBD'}\n• Guests: ${guestsVal}`;
       } else {
-        msg = `Halo Villa Joglo, saya ingin bertanya lebih lanjut tentang ${unitName} (Unit J1). (${refUrl})\n\n• Check-in: ${checkinVal || 'TBD'}\n• Check-out: ${checkoutVal || 'TBD'}\n• Jumlah Tamu: ${guestsVal}`;
+        msg = `Halo Villa Joglo, saya ingin bertanya lebih lanjut tentang ${unitLabel}. (${refUrl})\n\n• Check-in: ${checkinVal || 'TBD'}\n• Check-out: ${checkoutVal || 'TBD'}\n• Jumlah Tamu: ${guestsVal}`;
       }
 
       waBookingBtn.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
@@ -210,10 +212,8 @@
 
     let activeTarget = explicitTarget;
     if (!activeTarget) {
-      if (currentFile === 'stay.html') {
+      if (currentPath.includes('joglo-') || currentFile === 'detail-unit.html' || currentFile === 'stay.html' || currentPath.endsWith('/stay') || currentPath.endsWith('/stay/')) {
         activeTarget = 'stay.html';
-      } else if (currentFile === 'detail-unit.html') {
-        activeTarget = 'detail-unit.html';
       } else {
         // on index.html
         const hash = window.location.hash.replace('#', '').toLowerCase();
@@ -233,6 +233,7 @@
     navLinks.forEach((link) => {
       const target = link.getAttribute('data-nav-item');
       const isMatch = (target === activeTarget) || 
+                      (target === 'stay.html' && (activeTarget === 'stay.html' || currentPath.includes('joglo-') || currentFile === 'detail-unit.html')) ||
                       (target === 'index.html' && (!activeTarget || activeTarget === 'index.html'));
 
       const activeBadge = link.querySelector('.nav-active-badge');
@@ -262,6 +263,64 @@
   }
 
   // ==========================================
+  // UNIT CATEGORY FILTERING (stay.html & stay/index.html)
+  // ==========================================
+  function initUnitFilters() {
+    const filterButtons = document.querySelectorAll('[data-unit-filter]');
+    const unitCards = document.querySelectorAll('article[data-unit-category]');
+    if (!filterButtons.length || !unitCards.length) return;
+
+    function applyFilter(selectedFilter) {
+      // 1. Update button styling
+      filterButtons.forEach((b) => {
+        const isCurrent = b.getAttribute('data-unit-filter') === selectedFilter;
+        if (isCurrent) {
+          b.className = 'filter-tab-btn active px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium rounded-full cursor-pointer transition-all duration-300 shadow-sm bg-stone-900 text-white dark:bg-brass dark:text-stone-950 border border-transparent';
+        } else {
+          b.className = 'filter-tab-btn px-4 sm:px-5 py-2 text-xs uppercase tracking-widest font-medium border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-600 dark:text-stone-300 hover:text-brass rounded-full cursor-pointer transition-all duration-300 bg-transparent';
+        }
+      });
+
+      // 2. Filter unit cards
+      unitCards.forEach((card) => {
+        const categories = (card.getAttribute('data-unit-category') || '').trim().split(/\s+/);
+        const isMatch = selectedFilter === 'all' || categories.includes(selectedFilter);
+
+        if (isMatch) {
+          card.classList.remove('hidden');
+          card.classList.remove('unit-fade-in');
+          void card.offsetWidth; // trigger reflow for smooth re-animation
+          card.classList.add('unit-fade-in');
+        } else {
+          card.classList.add('hidden');
+          card.classList.remove('unit-fade-in');
+        }
+      });
+
+      // 3. Refresh AOS offsets so scroll position and animations remain accurate
+      if (typeof AOS !== 'undefined') {
+        setTimeout(() => {
+          AOS.refresh();
+        }, 120);
+      }
+    }
+
+    filterButtons.forEach((btn) => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const selectedFilter = btn.getAttribute('data-unit-filter');
+        applyFilter(selectedFilter);
+      });
+    });
+
+    // Support URL hash filtering on page load (e.g., stay.html#private-pool)
+    const hashFilter = window.location.hash.replace('#', '').toLowerCase();
+    if (['private-pool', 'honeymoon', 'family'].includes(hashFilter)) {
+      applyFilter(hashFilter);
+    }
+  }
+
+  // ==========================================
   // DOMContentLoaded Initializations
   // ==========================================
   document.addEventListener('DOMContentLoaded', () => {
@@ -270,6 +329,7 @@
     updateThemeToggleIcons(document.documentElement.classList.contains('dark'));
     highlightActiveMenu();
     updateWhatsAppLink();
+    initUnitFilters();
 
     // Listen to hash changes (e.g. #filosofi, #pengalaman)
     window.addEventListener('hashchange', () => {

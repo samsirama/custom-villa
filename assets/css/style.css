@@ -284,3 +284,21 @@ html.dark ::selection {
   background-color: #D8B175;
   color: #120E0C;
 }
+
+/* ==========================================================================
+   UNIT FILTER TRANSITIONS
+   ========================================================================== */
+@keyframes unitFilterFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.99);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.unit-fade-in {
+  animation: unitFilterFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
