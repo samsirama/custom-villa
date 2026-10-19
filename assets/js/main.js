@@ -117,6 +117,29 @@
   // ==========================================
   // 3. WHATSAPP CONTEXTUAL CONCIERGE GENERATOR
   // ==========================================
+  function getUnitShareUrl(btn, unitName, unitCode) {
+    let slug = btn ? btn.getAttribute('data-wa-unit-slug') : '';
+    if (!slug) {
+      const key = (unitName || '').toLowerCase().trim();
+      const codeKey = (unitCode || '').toLowerCase().trim();
+      if (key.includes('ageng') || codeKey === 'unit j1') slug = 'joglo-ageng';
+      else if (key.includes('tirta') || codeKey === 'unit j2') slug = 'joglo-tirta';
+      else if (key.includes('sekar') || codeKey === 'unit j3') slug = 'joglo-sekar';
+      else if (key.includes('lawas') || codeKey === 'unit j4') slug = 'joglo-lawas';
+    }
+
+    if (slug) {
+      if (window.location.protocol.startsWith('http')) {
+        const origin = window.location.origin;
+        const isHtml = window.location.pathname.endsWith('.html');
+        return `${origin}/stay/${slug}${isHtml ? '.html' : ''}`;
+      }
+      return `https://villajoglo.com/stay/${slug}.html`;
+    }
+
+    return window.location.href.split('#')[0] || 'https://villajoglo.com/stay.html';
+  }
+
   function updateWhatsAppLink() {
     const currentLang = document.documentElement.getAttribute('lang') || 'id';
     const waPhone = '6281234567890';
@@ -127,7 +150,7 @@
       const unitName = btn.getAttribute('data-wa-unit-name');
       const unitCode = btn.getAttribute('data-wa-unit-code');
       const unitLabel = unitCode ? `${unitName} (${unitCode})` : unitName;
-      const refUrl = window.location.href.split('#')[0] || 'https://villajoglo.com/stay.html';
+      const refUrl = getUnitShareUrl(btn, unitName, unitCode);
 
       let msg = '';
       if (currentLang === 'en') {
@@ -153,7 +176,7 @@
       const checkinVal = checkinInput && checkinInput.value ? checkinInput.value : '';
       const checkoutVal = checkoutInput && checkoutInput.value ? checkoutInput.value : '';
       const guestsVal = guestsSelect ? guestsSelect.value : '2 Tamu Dewasa';
-      const refUrl = window.location.href.split('#')[0] || 'https://villajoglo.com/stay/joglo-ageng.html';
+      const refUrl = getUnitShareUrl(waBookingBtn, unitName, unitCode);
 
       let msg = '';
       if (currentLang === 'en') {
