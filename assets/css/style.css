@@ -1,0 +1,286 @@
+/* ==========================================================================
+   VILLA JOGLO - LUXURY HERITAGE SANCTUARY
+   Art Direction: Lepari Batukaras (Earthy, Organic, Architectural, Classy)
+   Fully Responsive & Universal Mobile/Desktop Compatibility
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'Cormorant Garamond', Garamond, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  /* Earthy Tones: Aged Teak, Warm Linen, Bone, Sand Gold, Forest */
+  --color-bg-base: #FAF7F2;
+  --color-bg-subtle: #F3ECE2;
+  --color-bg-surface: #FFFFFF;
+  --color-bg-elevated: #EDE4D8;
+  
+  --color-text-main: #241913;
+  --color-text-muted: #6E5F55;
+  --color-text-faint: #9C8C80;
+  
+  --color-border: rgba(36, 25, 19, 0.1);
+  --color-border-subtle: rgba(36, 25, 19, 0.05);
+
+  --color-wood: #6D4C3D;
+  --color-wood-dark: #3F2A21;
+  --color-forest: #2E4536;
+  --color-forest-light: #4A6B56;
+  --color-gold: #C09A67;
+  --color-gold-hover: #AA824F;
+  --color-bone: #FCFAF7;
+}
+
+html.dark {
+  /* Dark Mode: Deep Espresso Charcoal, Aged Teak Night, Warm Sand Accent */
+  --color-bg-base: #120E0C;
+  --color-bg-subtle: #191411;
+  --color-bg-surface: #211B17;
+  --color-bg-elevated: #2B231E;
+  
+  --color-text-main: #F5EFEB;
+  --color-text-muted: #B8ACA2;
+  --color-text-faint: #7A6F66;
+  
+  --color-border: rgba(245, 239, 235, 0.12);
+  --color-border-subtle: rgba(245, 239, 235, 0.06);
+
+  --color-wood: #B98B73;
+  --color-wood-dark: #DFB29B;
+  --color-forest: #547E64;
+  --color-forest-light: #73A687;
+  --color-gold: #D8B175;
+  --color-gold-hover: #E8C48C;
+  --color-bone: #1A1512;
+}
+
+/* ==========================================================================
+   RESET & ABSOLUTE ZERO-HORIZONTAL-OVERFLOW ENGINE
+   ========================================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+}
+
+@supports not (overflow-x: clip) {
+  html {
+    overflow-x: hidden;
+  }
+}
+
+body {
+  overflow-x: clip;
+  overflow-y: visible;
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-main);
+  position: relative;
+}
+
+/* Bilingual Display Engine */
+html[lang="id"] .lang-en {
+  display: none !important;
+}
+
+html[lang="en"] .lang-id {
+  display: none !important;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Earthy custom utility borders & tints */
+.border-theme {
+  border-color: var(--color-border);
+}
+
+.bg-theme-base {
+  background-color: var(--color-bg-base);
+}
+
+.bg-theme-subtle {
+  background-color: var(--color-bg-subtle);
+}
+
+.bg-theme-surface {
+  background-color: var(--color-bg-surface);
+}
+
+.text-theme-main {
+  color: var(--color-text-main);
+}
+
+.text-theme-muted {
+  color: var(--color-text-muted);
+}
+
+.text-theme-gold {
+  color: var(--color-gold);
+}
+
+.text-theme-forest {
+  color: var(--color-forest);
+}
+
+/* ==========================================================================
+   FULLSCREEN NAVIGATION OVERLAY (RESPONSIVE & ATMOSPHERIC)
+   ========================================================================== */
+.fullscreen-nav-overlay {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(-16px);
+  transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.4s ease;
+  overflow: hidden; /* NEVER create a scrollbar when menu is closed */
+}
+
+.fullscreen-nav-overlay.is-active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+  overflow-y: auto; /* Only enable scrolling when menu is actively open */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Hamburger Icon Animation */
+.hamburger-line {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.2s ease,
+              background-color 0.3s ease;
+}
+
+.menu-open .hamburger-line-1 {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.menu-open .hamburger-line-2 {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.menu-open .hamburger-line-3 {
+  transform: translateY(-5px) rotate(-45deg);
+}
+
+/* Staggered Navigation Items */
+.nav-stagger-item {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fullscreen-nav-overlay.is-active .nav-stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fullscreen-nav-overlay.is-active .nav-stagger-item:nth-child(1) { transition-delay: 0.08s; }
+.fullscreen-nav-overlay.is-active .nav-stagger-item:nth-child(2) { transition-delay: 0.14s; }
+.fullscreen-nav-overlay.is-active .nav-stagger-item:nth-child(3) { transition-delay: 0.20s; }
+.fullscreen-nav-overlay.is-active .nav-stagger-item:nth-child(4) { transition-delay: 0.26s; }
+.fullscreen-nav-overlay.is-active .nav-stagger-item:nth-child(5) { transition-delay: 0.32s; }
+
+/* Active Menu Item Highlight */
+.nav-active-item {
+  color: var(--color-gold) !important;
+}
+
+/* Custom Horizontal Gallery Scrollbar */
+.gallery-scroll-container {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-gold) transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-scroll-container::-webkit-scrollbar {
+  height: 5px;
+}
+
+.gallery-scroll-container::-webkit-scrollbar-track {
+  background: var(--color-bg-subtle);
+  border-radius: 9999px;
+}
+
+.gallery-scroll-container::-webkit-scrollbar-thumb {
+  background-color: var(--color-gold);
+  border-radius: 9999px;
+}
+
+/* Image Zoom & Vignette Effects */
+.img-editorial {
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), filter 0.5s ease;
+}
+
+.group:hover .img-editorial {
+  transform: scale(1.04);
+}
+
+/* Back Button Hover Animation */
+.back-btn-hover {
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+.back-btn-hover:hover {
+  color: var(--color-gold);
+}
+
+.back-btn-hover:hover i {
+  transform: translateX(-4px);
+}
+
+/* Glass panel */
+.glass-panel {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Floating pulse animation */
+@keyframes subtle-pulse {
+  0%, 100% { opacity: 0.9; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.03); }
+}
+
+.pulse-subtle {
+  animation: subtle-pulse 4s infinite ease-in-out;
+}
+
+/* Custom selection */
+::selection {
+  background-color: #6D4C3D;
+  color: #FAF7F2;
+}
+
+html.dark ::selection {
+  background-color: #D8B175;
+  color: #120E0C;
+}

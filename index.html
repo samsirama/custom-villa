@@ -1,436 +1,1015 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Sewa Villa Custom Mewah dan Eksklusif. Nikmati pengalaman menginap dengan fasilitas premium, pemandangan indah, dan kenyamanan tanpa batas.">
-    <meta name="keywords" content="villa mewah, sewa villa, villa custom, penginapan eksklusif, liburan keluarga">
-    <meta name="author" content="Villa Custom">
-    <title>Villa Custom | Penginapan Mewah & Eksklusif</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- ==========================================
+       SEO Primary Meta Tags
+       ========================================== -->
+  <title>Villa Joglo | Luxury Heritage Sanctuary — Sewa Villa Tradisional Eksklusif</title>
+  <meta name="title" content="Villa Joglo | Luxury Heritage Sanctuary — Sewa Villa Tradisional Eksklusif" />
+  <meta name="description" content="Temukan ketenangan sejati di Villa Joglo. Peristirahatan eksklusif dengan arsitektur kayu jati kuno ratusan tahun, private infinity pool, dan panorama alam tropis asri. Pesan pengalaman menginap magis Anda." />
+  <meta name="keywords" content="sewa villa joglo, villa joglo mewah, luxury joglo resort, penginapan tradisional eksklusif, private villa jogja, boutique resort indonesia, heritage sanctuary" />
+  <meta name="author" content="Villa Joglo Heritage Sanctuary" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://villajoglo.com/index.html" />
 
-    <!-- Google Fonts: Playfair Display (Elegant) & Inter (Modern) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://villajoglo.com/index.html" />
+  <meta property="og:title" content="Villa Joglo | Luxury Heritage Sanctuary" />
+  <meta property="og:description" content="Koleksi villa Joglo autentik berbalut kemewahan modern di tengah alam tenang. Private pool, butler pribadi, dan ketenangan abadi." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:locale" content="id_ID" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:site_name" content="Villa Joglo" />
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://villajoglo.com/index.html" />
+  <meta name="twitter:title" content="Villa Joglo | Luxury Heritage Sanctuary" />
+  <meta name="twitter:description" content="Cagar peristirahatan privat dengan arsitektur kayu jati antik dan ketenangan jiwa." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" />
 
-    <!-- Tailwind Configuration & Custom CSS -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#d4af37',
-                        goldHover: '#b5952f',
-                        darkBg: '#0f172a',
-                        darkCard: '#1e293b'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
+  <!-- Structured Data: JSON-LD for LodgingBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LodgingBusiness",
+    "name": "Villa Joglo Heritage Sanctuary",
+    "description": "Peristirahatan eksklusif bertaraf bintang lima dengan arsitektur Rumah Joglo Jawa otentik dari kayu jati kuno, fasilitas kolam renang pribadi, dan pemandangan lembah tropis alami.",
+    "url": "https://villajoglo.com",
+    "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
+    "telephone": "+6281234567890",
+    "priceRange": "Rp 2.800.000 - Rp 6.500.000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Jalan Lembah Kayu Manis No. 8, Dusun Candi Selo",
+      "addressLocality": "Yogyakarta",
+      "addressRegion": "Daerah Istimewa Yogyakarta",
+      "postalCode": "55581",
+      "addressCountry": "ID"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -7.6079,
+      "longitude": 110.2038
+    },
+    "amenityFeature": [
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Private Swimming Pool",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Personal Butler 24 Jam",
+        "value": true
+      },
+      {
+        "@type": "LocationFeatureSpecification",
+        "name": "Artisanal Organic Breakfast",
+        "value": true
+      }
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.96",
+      "reviewCount": "148"
+    }
+  }
+  </script>
+
+  <!-- Tailwind CSS via CDN with customized Earthy theme -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          screens: {
+            'xs': '400px',
+          },
+          colors: {
+            earth: {
+              50: '#FAF7F2',
+              100: '#F3ECE2',
+              200: '#EDE4D8',
+              300: '#DFD1C0',
+              400: '#C5B29B',
+              500: '#A98F74',
+              600: '#846951',
+              700: '#644D3A',
+              800: '#473629',
+              900: '#2A1F17',
+              950: '#14100E',
+            },
+            wood: {
+              DEFAULT: '#6D4C3D',
+              dark: '#3F2A21',
+              light: '#9E745C',
+              deep: '#231813',
+            },
+            forest: {
+              DEFAULT: '#2E4536',
+              dark: '#1C2E23',
+              light: '#4A6B56',
+            },
+            brass: {
+              DEFAULT: '#C09A67',
+              hover: '#AA824F',
+              light: '#DFBF92',
             }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', '"Cormorant Garamond"', 'Georgia', 'serif'],
+            display: ['"Cormorant Garamond"', 'Garamond', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+          }
         }
-    </script>
+      }
+    }
+  </script>
 
-    <style>
-        /* Custom Smooth Scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-        /* Custom Animations */
-        .reveal {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Staggered delays for items side by side */
-        .delay-100 { transition-delay: 100ms; }
-        .delay-200 { transition-delay: 200ms; }
-        .delay-300 { transition-delay: 300ms; }
-
-        /* Zoom reveal effect */
-        .reveal-zoom {
-            opacity: 0;
-            transform: scale(0.9);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
-        }
-        .reveal-zoom.active {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        /* Hover Image Effect */
-        .img-hover-zoom {
-            overflow: hidden;
-        }
-        .img-hover-zoom img {
-            transition: transform 0.7s ease;
-        }
-        .img-hover-zoom:hover img {
-            transform: scale(1.1);
-        }
-
-        /* Navbar Scrolled State */
-        .nav-scrolled {
-            background-color: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Custom Button Hover */
-        .btn-gold {
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        .btn-gold::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: all 0.5s ease;
-            z-index: -1;
-        }
-        .btn-gold:hover::before {
-            left: 100%;
-        }
-        .btn-gold:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px -10px #d4af37;
-        }
-
-        /* Hero Parallax Overlay */
-        .hero-overlay {
-            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 1));
-        }
-    </style>
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="bg-darkBg text-slate-200 font-sans antialiased overflow-x-hidden">
+<body class="bg-[#FAF7F2] dark:bg-[#120E0C] text-[#241913] dark:text-[#F5EFEB] transition-colors duration-500 font-sans antialiased selection:bg-wood selection:text-white w-full max-w-full">
 
-    <!-- Header & Navigation -->
-    <header>
-        <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 md:px-12 flex justify-between items-center bg-transparent">
-            <a href="#" class="font-serif text-2xl md:text-3xl font-bold tracking-wider text-white">
-                VILLA <span class="text-gold">CUSTOM</span>
+  <!-- ==========================================
+       HEADER & NAVIGATION BAR (FULLY RESPONSIVE)
+       - Garis 3 Menu on the LEFT
+       - Language switcher ID | EN on the LEFT
+       - Center Logo Branding (flex shrink protected)
+       - Right Theme Toggle & Book Button
+       - Zero horizontal overflow on 320px to 4K
+       ========================================== -->
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 md:py-6 px-4 sm:px-6 md:px-12 w-full max-w-full">
+    <div class="max-w-7xl mx-auto flex items-center justify-between w-full">
+      
+      <!-- LEFT SECTION: Hamburger Button (Garis 3) + Language Switcher -->
+      <div class="flex items-center space-x-2.5 sm:space-x-4 shrink-0">
+        
+        <!-- Hamburger Menu Button (Garis 3) -->
+        <button type="button" data-menu-toggle class="p-1.5 focus:outline-none group flex items-center space-x-2 text-stone-900 dark:text-stone-100 hover:text-brass transition-colors" aria-label="Buka Menu Navigasi Layar Penuh">
+          <div class="w-5 sm:w-6 h-4 flex flex-col justify-between">
+            <span class="hamburger-line hamburger-line-1 w-full h-[2px] bg-stone-900 dark:bg-stone-100 group-hover:bg-brass rounded-full"></span>
+            <span class="hamburger-line hamburger-line-2 w-3/4 h-[2px] bg-stone-900 dark:bg-stone-100 group-hover:bg-brass rounded-full transition-all group-hover:w-full"></span>
+            <span class="hamburger-line hamburger-line-3 w-full h-[2px] bg-stone-900 dark:bg-stone-100 group-hover:bg-brass rounded-full"></span>
+          </div>
+          <span class="text-[11px] uppercase tracking-[0.2em] font-semibold hidden md:inline-block">Menu</span>
+        </button>
+
+        <!-- Divider Line -->
+        <span class="h-3.5 w-[1px] bg-stone-300 dark:bg-stone-700 hidden sm:inline-block"></span>
+
+        <!-- Language Switcher EN / ID -->
+        <div class="flex items-center space-x-1 text-[10px] sm:text-xs uppercase tracking-wider font-semibold" aria-label="Ganti Bahasa">
+          <button type="button" data-lang-btn="id" class="px-1 py-0.5 text-brass font-bold border-b border-brass transition-colors focus:outline-none" title="Bahasa Indonesia">ID</button>
+          <span class="text-stone-400 opacity-60">/</span>
+          <button type="button" data-lang-btn="en" class="px-1 py-0.5 text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors focus:outline-none" title="English">EN</button>
+        </div>
+
+      </div>
+
+      <!-- CENTER SECTION: Brand Logo -->
+      <a href="index.html" class="group flex flex-col items-center text-center px-2 shrink focus:outline-none" aria-label="Beranda Villa Joglo">
+        <span class="font-serif text-lg sm:text-2xl md:text-3xl tracking-[0.16em] sm:tracking-[0.22em] font-semibold uppercase text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors truncate max-w-[170px] sm:max-w-none">
+          Villa Joglo
+        </span>
+        <span class="font-sans text-[7px] sm:text-[9px] tracking-[0.3em] uppercase text-stone-500 dark:text-stone-400 hidden xs:block -mt-0.5">
+          Heritage Sanctuary
+        </span>
+      </a>
+
+      <!-- RIGHT SECTION: Theme Toggle & Direct Reservation CTA -->
+      <div class="flex items-center space-x-2 sm:space-x-4 shrink-0">
+        
+        <!-- Dark / Light Mode Toggle Button -->
+        <button type="button" data-theme-toggle class="p-2 rounded-full border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-700 dark:text-stone-300 hover:text-brass transition-colors focus:outline-none" aria-label="Ganti Mode Tema">
+          <i class="fa-solid fa-moon theme-icon-moon text-xs"></i>
+          <i class="fa-solid fa-sun theme-icon-sun text-xs hidden text-amber-400"></i>
+        </button>
+
+        <!-- Direct CTA Button -->
+        <a href="stay.html" class="inline-flex items-center px-3.5 sm:px-5 py-2 text-[10px] sm:text-xs uppercase tracking-[0.18em] font-semibold text-white bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 dark:hover:bg-brass-hover transition-colors rounded-sm shadow-sm">
+          <span class="lang-id">Reservasi</span>
+          <span class="lang-en">Book</span>
+          <i class="fa-solid fa-arrow-right ml-1.5 text-[9px] hidden sm:inline-block"></i>
+        </a>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================
+       FULLSCREEN OVERLAY NAVIGATION (RICH HERITAGE LAYOUT)
+       - Highlight active menu item currently viewed
+       - Multilingual support ID / EN
+       - Complete Concierge & Location Information
+       ========================================== -->
+  <aside id="fullscreenNav" class="fullscreen-nav-overlay fixed inset-0 z-50 bg-[#FAF7F2]/98 dark:bg-[#120E0C]/98 backdrop-blur-2xl flex flex-col justify-between p-6 sm:p-10 md:p-14" aria-label="Menu Layar Penuh">
+    
+    <!-- Top Bar inside Menu -->
+    <div class="flex items-center justify-between border-b border-stone-200 dark:border-stone-800 pb-5 w-full">
+      <div class="flex flex-col">
+        <span class="font-serif text-xl sm:text-2xl tracking-[0.2em] font-semibold text-stone-900 dark:text-stone-100 uppercase">Villa Joglo</span>
+        <span class="text-[9px] uppercase tracking-[0.3em] text-stone-500">Heritage Sanctuary</span>
+      </div>
+      
+      <div class="flex items-center space-x-3">
+        <!-- Language Switch inside Menu -->
+        <div class="flex items-center space-x-1.5 text-[11px] uppercase tracking-wider font-semibold border border-stone-300 dark:border-stone-700 px-2.5 py-1 rounded-full">
+          <button type="button" data-lang-btn="id" class="px-1 text-brass font-bold border-b border-brass">ID</button>
+          <span class="text-stone-400 opacity-60">/</span>
+          <button type="button" data-lang-btn="en" class="px-1 text-stone-400 hover:text-brass">EN</button>
+        </div>
+
+        <button type="button" data-theme-toggle class="p-1.5 rounded-full border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon theme-icon-moon text-xs"></i>
+          <i class="fa-solid fa-sun theme-icon-sun text-xs hidden text-amber-400"></i>
+        </button>
+
+        <button type="button" data-menu-toggle class="p-1.5 text-stone-700 dark:text-stone-300 hover:text-brass text-2xl focus:outline-none" aria-label="Tutup Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Center Navigation Links with Active Page Highlighting -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-auto py-8">
+      
+      <!-- Left Column: Primary Staggered Links -->
+      <div class="lg:col-span-7 space-y-4 md:space-y-6">
+        
+        <!-- Nav 01: Beranda (Active on index.html) -->
+        <div class="nav-stagger-item">
+          <a href="index.html" data-nav-item="index.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-brass transition-colors">
+            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-brass font-semibold">01</span>
+            <span class="nav-text-label font-semibold group-hover:translate-x-2 transition-transform duration-300">
+              <span class="lang-id">Beranda</span>
+              <span class="lang-en">Home</span>
+            </span>
+            <span class="nav-active-badge text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
+              <span class="lang-id">Sedang Dilihat</span>
+              <span class="lang-en">Active</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Nav 02: Pilihan Unit -->
+        <div class="nav-stagger-item">
+          <a href="stay.html" data-nav-item="stay.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
+            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">02</span>
+            <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
+              <span class="lang-id">Pilihan Unit & Kamar</span>
+              <span class="lang-en">Villas & Suites</span>
+            </span>
+            <span class="nav-active-badge hidden text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
+              <span class="lang-id">Sedang Dilihat</span>
+              <span class="lang-en">Active</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Nav 03: Joglo Ageng Detail -->
+        <div class="nav-stagger-item">
+          <a href="detail-unit.html" data-nav-item="detail-unit.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
+            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">03</span>
+            <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
+              <span class="lang-id">Joglo Ageng (Detail)</span>
+              <span class="lang-en">Joglo Ageng (Suite)</span>
+            </span>
+            <span class="nav-active-badge hidden text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
+              <span class="lang-id">Sedang Dilihat</span>
+              <span class="lang-en">Active</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Nav 04: Filosofi -->
+        <div class="nav-stagger-item">
+          <a href="index.html#filosofi" data-nav-item="filosofi" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
+            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">04</span>
+            <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
+              <span class="lang-id">Filosofi Kayu Jati</span>
+              <span class="lang-en">Teak Philosophy</span>
+            </span>
+          </a>
+        </div>
+
+        <!-- Nav 05: Pengalaman -->
+        <div class="nav-stagger-item">
+          <a href="index.html#pengalaman" data-nav-item="pengalaman" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
+            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">05</span>
+            <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
+              <span class="lang-id">Pengalaman Menginap</span>
+              <span class="lang-en">Experiences</span>
+            </span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Concierge Info -->
+      <div class="lg:col-span-5 flex flex-col justify-center space-y-6 sm:space-y-8 border-t lg:border-t-0 lg:border-l border-stone-200 dark:border-stone-800 pt-6 lg:pt-0 lg:pl-10">
+        <div>
+          <h4 class="text-xs uppercase tracking-[0.3em] font-semibold text-brass mb-2">
+            <span class="lang-id">Reservasi & Konsultasi</span>
+            <span class="lang-en">Inquiries & Reservations</span>
+          </h4>
+          <p class="font-serif text-lg sm:text-xl text-stone-800 dark:text-stone-200 mb-2">Private Concierge 24/7</p>
+          <a href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20menanyakan%20ketersediaan%20villa." class="inline-flex items-center text-stone-600 dark:text-stone-400 hover:text-brass transition-colors text-xs sm:text-sm">
+            <i class="fa-brands fa-whatsapp text-lg mr-2 text-emerald-600"></i> +62 812-3456-7890
+          </a>
+        </div>
+        <div>
+          <h4 class="text-xs uppercase tracking-[0.3em] font-semibold text-brass mb-2">
+            <span class="lang-id">Lokasi Sanctuary</span>
+            <span class="lang-en">Sanctuary Location</span>
+          </h4>
+          <p class="text-xs sm:text-sm text-stone-600 dark:text-stone-400 leading-relaxed font-light">
+            <span class="lang-id">Lembah Candi Selo, Kaki Perbukitan Menoreh, Yogyakarta, Indonesia. Dikelilingi hutan bambu, gemercik mata air, dan sawah terasering.</span>
+            <span class="lang-en">Candi Selo Valley, Menoreh Foothills, Yogyakarta, Indonesia. Encompassed by bamboo forests, fresh springs, and cascading rice terraces.</span>
+          </p>
+        </div>
+        <div>
+          <h4 class="text-xs uppercase tracking-[0.3em] font-semibold text-brass mb-2">
+            <span class="lang-id">Ikuti Suasana Kami</span>
+            <span class="lang-en">Follow Atmosphere</span>
+          </h4>
+          <div class="flex space-x-3 text-stone-700 dark:text-stone-300">
+            <a href="#" class="w-9 h-9 rounded-full border border-stone-300 dark:border-stone-700 flex items-center justify-center hover:bg-brass hover:text-white transition-all text-xs"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full border border-stone-300 dark:border-stone-700 flex items-center justify-center hover:bg-brass hover:text-white transition-all text-xs"><i class="fa-brands fa-pinterest"></i></a>
+            <a href="#" class="w-9 h-9 rounded-full border border-stone-300 dark:border-stone-700 flex items-center justify-center hover:bg-brass hover:text-white transition-all text-xs"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar inside Menu -->
+    <div class="border-t border-stone-200 dark:border-stone-800 pt-4 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500">
+      <span>&copy; 2026 Villa Joglo Heritage Sanctuary. All Rights Reserved.</span>
+      <div class="flex space-x-6 mt-2 sm:mt-0">
+        <a href="#" class="hover:underline">Privacy Policy</a>
+        <a href="#" class="hover:underline">Terms of Stay</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       MAIN CONTENT: HERO & STORYTELLING
+       (No back button on index.html)
+       ========================================== -->
+  <main class="w-full max-w-full">
+
+    <!-- HERO SECTION: Atmospheric Storytelling Hook -->
+    <section class="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 pb-16 px-4 sm:px-6 w-full max-w-full">
+      
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 overflow-hidden w-full h-full">
+        <img 
+          src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=85" 
+          alt="Pemandangan kolam renang alami dan arsitektur kayu jati tropis Villa Joglo" 
+          class="w-full h-full object-cover object-center scale-105 transition-transform duration-[10000ms] ease-out hover:scale-100"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-stone-950/45 to-stone-950/70 dark:from-[#120E0C] dark:via-stone-950/60 dark:to-stone-950/80"></div>
+        <div class="absolute inset-0 bg-black/20"></div>
+      </div>
+
+      <!-- Hero Copywriting & Actions -->
+      <div class="relative z-10 max-w-4xl mx-auto text-center text-white space-y-6 sm:space-y-8 mt-6 sm:mt-12 w-full px-2" data-aos="fade-up" data-aos-duration="1100">
+        
+        <!-- Overhead Label -->
+        <div class="inline-flex items-center space-x-2.5 bg-stone-900/50 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs uppercase tracking-[0.25em] text-stone-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-brass pulse-subtle"></span>
+          <span>A Sanctuary For The Senses</span>
+        </div>
+
+        <!-- Main Headline (Bilingual & Responsive) -->
+        <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.12] tracking-tight max-w-full break-words">
+          <span class="lang-id">
+            Menemukan Kedamaian <br />
+            <span class="italic font-light text-stone-200">di Balik Kayu Jati Kuno</span>
+          </span>
+          <span class="lang-en">
+            Rediscover Serenity <br />
+            <span class="italic font-light text-stone-200">Amidst Century-Old Teak</span>
+          </span>
+        </h1>
+
+        <!-- Subheadline Storytelling (Bilingual) -->
+        <p class="max-w-2xl mx-auto text-stone-200 font-light text-sm sm:text-lg md:text-xl leading-relaxed tracking-wide px-2">
+          <span class="lang-id">
+            Bukan sekadar tempat menginap, melainkan perjalanan pulang ke pelukan alam. Rasakan sakralnya arsitektur Joglo berkayu jati ratusan tahun, embun pagi perbukitan, dan ketenangan tanpa batas.
+          </span>
+          <span class="lang-en">
+            More than just a stay—a journey back to nature's embrace. Experience the sacred spirit of century-old teakwood Joglo architecture, mist-kissed hills, and unbounded tranquility.
+          </span>
+        </p>
+
+        <!-- CTA Action Buttons -->
+        <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full max-w-xs sm:max-w-none mx-auto">
+          <a href="stay.html" class="w-full sm:w-auto px-7 py-3.5 sm:py-4 bg-brass hover:bg-brass-hover text-stone-950 font-semibold text-xs uppercase tracking-[0.22em] transition-all duration-300 shadow-lg hover:shadow-brass/30 transform hover:-translate-y-0.5 rounded-sm text-center">
+            <span class="lang-id">Eksplorasi Unit & Kamar</span>
+            <span class="lang-en">Explore Villas & Suites</span>
+          </a>
+          <a href="#filosofi" class="w-full sm:w-auto px-7 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium text-xs uppercase tracking-[0.22em] backdrop-blur-sm transition-all duration-300 rounded-sm text-center">
+            <span class="lang-id">Filosofi & Ruang Kami</span>
+            <span class="lang-en">Our Heritage Philosophy</span>
+          </a>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="pt-8 sm:pt-12 flex flex-col items-center justify-center text-stone-300">
+          <span class="text-[9px] uppercase tracking-[0.3em] mb-2 opacity-80">
+            <span class="lang-id">Gulir ke Bawah</span>
+            <span class="lang-en">Scroll Down</span>
+          </span>
+          <div class="w-[1px] h-8 sm:h-10 bg-gradient-to-b from-brass to-transparent animate-pulse"></div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- KEY FEATURES STRIP -->
+    <section class="border-y border-stone-200 dark:border-stone-800 bg-[#F3ECE2] dark:bg-[#191411] py-8 px-4 sm:px-6 w-full max-w-full">
+      <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="space-y-1">
+          <p class="font-serif text-2xl sm:text-3xl font-semibold text-wood dark:text-brass">100%</p>
+          <p class="text-[10px] sm:text-xs uppercase tracking-widest text-stone-600 dark:text-stone-400">
+            <span class="lang-id">Kayu Jati Lawas</span>
+            <span class="lang-en">Reclaimed Teak</span>
+          </p>
+        </div>
+        <div class="space-y-1">
+          <p class="font-serif text-2xl sm:text-3xl font-semibold text-wood dark:text-brass">4 Units</p>
+          <p class="text-[10px] sm:text-xs uppercase tracking-widest text-stone-600 dark:text-stone-400">
+            <span class="lang-id">Sanctuary Privat</span>
+            <span class="lang-en">Private Villas</span>
+          </p>
+        </div>
+        <div class="space-y-1">
+          <p class="font-serif text-2xl sm:text-3xl font-semibold text-wood dark:text-brass">24 Jam</p>
+          <p class="text-[10px] sm:text-xs uppercase tracking-widest text-stone-600 dark:text-stone-400">
+            <span class="lang-id">Dedicated Butler</span>
+            <span class="lang-en">Private Butler</span>
+          </p>
+        </div>
+        <div class="space-y-1">
+          <p class="font-serif text-2xl sm:text-3xl font-semibold text-wood dark:text-brass">1.2 Ha</p>
+          <p class="text-[10px] sm:text-xs uppercase tracking-widest text-stone-600 dark:text-stone-400">
+            <span class="lang-id">Lanskap Tropis</span>
+            <span class="lang-en">Tropical Valley</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 1: FILOSOFI VILLA JOGLO
+         ========================================== -->
+    <section id="filosofi" class="py-20 md:py-32 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        
+        <!-- Left Image Composition -->
+        <div class="lg:col-span-6 relative" data-aos="fade-right">
+          <div class="relative overflow-hidden rounded-sm shadow-xl group">
+            <img 
+              src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80" 
+              alt="Detail interior megah arsitektur kayu jati Joglo dengan ukiran tumpangsari otentik" 
+              class="w-full h-[380px] sm:h-[480px] md:h-[580px] object-cover img-editorial"
+            />
+            <div class="absolute inset-0 bg-stone-900/10 group-hover:bg-transparent transition-colors"></div>
+          </div>
+          
+          <!-- Floating Editorial Quote Badge -->
+          <div class="absolute -bottom-6 -right-2 sm:-right-6 bg-white dark:bg-[#211B17] border border-stone-200 dark:border-stone-800 p-5 sm:p-6 max-w-xs shadow-2xl rounded-sm hidden sm:block" data-aos="fade-up" data-aos-delay="200">
+            <p class="font-serif italic text-sm text-stone-800 dark:text-stone-200 leading-snug">
+              <span class="lang-id">"Di dalam tumpangsari kayu jati, terkandung doa para leluhur tentang keseimbangan semesta dan keteduhan batin."</span>
+              <span class="lang-en">"Within the tiered teak roof rafters lies ancestral prayer for cosmic balance and inward tranquility."</span>
+            </p>
+            <span class="block mt-2.5 text-[10px] tracking-widest uppercase font-semibold text-brass">
+              <span class="lang-id">— Filosofi Arsitektur Jawa</span>
+              <span class="lang-en">— Javanese Architectural Wisdom</span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Right Storytelling Narrative -->
+        <div class="lg:col-span-6 space-y-5 sm:space-y-6" data-aos="fade-left">
+          
+          <div class="inline-block">
+            <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brass">
+              <span class="lang-id">Warisan & Jiwa Rumah</span>
+              <span class="lang-en">Heritage & Soul of The House</span>
+            </span>
+            <div class="h-[1px] w-12 bg-brass mt-1"></div>
+          </div>
+
+          <h2 class="font-serif text-2xl sm:text-4xl lg:text-5xl font-normal leading-tight text-stone-900 dark:text-stone-100">
+            <span class="lang-id">
+              Arsitektur yang Bernapas, <br />
+              <span class="italic font-light">Keheningan yang Menyembuhkan</span>
+            </span>
+            <span class="lang-en">
+              Architecture That Breathes, <br />
+              <span class="italic font-light">Silence That Restores</span>
+            </span>
+          </h2>
+
+          <p class="text-stone-700 dark:text-stone-300 font-light leading-relaxed text-sm sm:text-base md:text-lg">
+            <span class="lang-id">
+              Villa Joglo dibangun bukan hanya sebagai tempat peristirahatan, tetapi sebagai karya seni hidup. Kami merestorasi struktur Rumah Joglo antik berusia lebih dari satu abad yang dipahat tangan oleh empu kayu Jawa tempo dulu. Menggunakan pasak kayu tradisional tanpa paku besi, struktur ini berdiri fleksibel, kokoh, dan selaras dengan getaran bumi.
+            </span>
+            <span class="lang-en">
+              Villa Joglo is conceived not merely as an accommodation, but as a living piece of cultural artistry. We meticulously restored centuries-old antique Joglo pavilions hand-carved by master artisans. Assembled using traditional wooden mortise-and-tenon joints without a single iron nail, each structure breathes harmoniously with the earth.
+            </span>
+          </p>
+
+          <p class="text-stone-600 dark:text-stone-400 font-light leading-relaxed text-xs sm:text-sm md:text-base">
+            <span class="lang-id">
+              Di bawah struktur atap bertingkat <em>Tumpangsari</em> dan empat tiang utama <em>Soko Guru</em>, ruang bernapas secara leluasa. Angin lembah mengalir menyejukkan ruangan secara alami tanpa sekat yang mengurung, membiarkan aroma kayu jati tua berpadu dengan wanginya rerumputan basah seusai hujan.
+            </span>
+            <span class="lang-en">
+              Beneath the cascading <em>Tumpangsari</em> ceiling and the monumental <em>Soko Guru</em> pillars, spatial freedom reigns. Mountain breezes circulate uninhibitedly across open pavilions, marrying the grounding scent of ancient teak with the fresh fragrance of rain-soaked flora.
+            </span>
+          </p>
+
+          <!-- Core Pillars -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 pt-4 border-t border-stone-200 dark:border-stone-800">
+            <div class="space-y-1.5">
+              <div class="flex items-center space-x-2 text-wood dark:text-brass font-medium">
+                <i class="fa-solid fa-leaf text-sm"></i>
+                <h3 class="text-xs sm:text-sm tracking-wider uppercase font-semibold">
+                  <span class="lang-id">Selaras Alam Tropis</span>
+                  <span class="lang-en">Tropical Harmony</span>
+                </h3>
+              </div>
+              <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed font-light">
+                <span class="lang-id">Desain terbuka yang memanfaatkan sirkulasi angin pegunungan dan pencahayaan matahari alami.</span>
+                <span class="lang-en">Passive cooling design embracing gentle mountain airflow and warm natural sunlight.</span>
+              </p>
+            </div>
+            <div class="space-y-1.5">
+              <div class="flex items-center space-x-2 text-wood dark:text-brass font-medium">
+                <i class="fa-solid fa-gem text-sm"></i>
+                <h3 class="text-xs sm:text-sm tracking-wider uppercase font-semibold">
+                  <span class="lang-id">Privasi Tanpa Kompromi</span>
+                  <span class="lang-en">Absolute Seclusion</span>
+                </h3>
+              </div>
+              <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed font-light">
+                <span class="lang-id">Setiap unit dirancang terpisah dengan lanskap taman rimbun, memastikan kedamaian privat seutuhnya.</span>
+                <span class="lang-en">Each standalone villa is cocooned in bespoke tropical gardens for uncompromised privacy.</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <a href="stay.html" class="inline-flex items-center text-xs uppercase tracking-[0.22em] font-semibold text-wood dark:text-brass hover:text-stone-950 dark:hover:text-white transition-colors group">
+              <span class="lang-id">Lihat Detail Koleksi Unit Kami</span>
+              <span class="lang-en">View Our Villa Collection</span>
+              <i class="fa-solid fa-arrow-right-long ml-3 transform group-hover:translate-x-2 transition-transform"></i>
             </a>
-            
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 items-center">
-                <a href="#beranda" class="text-sm uppercase tracking-widest hover:text-gold transition duration-300">Beranda</a>
-                <a href="#tentang" class="text-sm uppercase tracking-widest hover:text-gold transition duration-300">Tentang</a>
-                <a href="#fasilitas" class="text-sm uppercase tracking-widest hover:text-gold transition duration-300">Fasilitas</a>
-                <a href="#galeri" class="text-sm uppercase tracking-widest hover:text-gold transition duration-300">Galeri</a>
-                <a href="https://wa.me/6281234567890" target="_blank" class="btn-gold bg-gold text-darkBg px-5 py-2 rounded-full text-sm font-semibold uppercase tracking-wide">
-                    Pesan Sekarang
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 2: FEATURED UNITS SHOWCASE
+         ========================================== -->
+    <section class="py-20 md:py-24 bg-[#F3ECE2] dark:bg-[#191411] transition-colors px-4 sm:px-6 w-full max-w-full">
+      <div class="max-w-7xl mx-auto space-y-12 sm:space-y-16">
+        
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between border-b border-stone-300 dark:border-stone-800 pb-6 sm:pb-8" data-aos="fade-up">
+          <div class="space-y-2 sm:space-y-3">
+            <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brass">
+              <span class="lang-id">Sanctuary Privat</span>
+              <span class="lang-en">Private Sanctuaries</span>
+            </span>
+            <h2 class="font-serif text-2xl sm:text-4xl md:text-5xl font-normal text-stone-900 dark:text-stone-100">
+              <span class="lang-id">Koleksi Unit Terkurasi</span>
+              <span class="lang-en">Curated Accommodations</span>
+            </h2>
+          </div>
+          <p class="max-w-md text-stone-600 dark:text-stone-400 text-xs sm:text-sm font-light leading-relaxed mt-3 md:mt-0">
+            <span class="lang-id">Setiap Joglo memiliki karakter arsitektur tersendiri, dirancang untuk memberi Anda ruang rehat yang privat, tenang, dan berkelas.</span>
+            <span class="lang-en">Each Joglo embodies its own distinct architectural character, designed to grant you an exclusive and timeless retreat.</span>
+          </p>
+        </div>
+
+        <!-- Featured Units Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10">
+
+          <!-- Card 1: Joglo Ageng -->
+          <article class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-[280px] sm:h-[360px] md:h-[400px] overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80" 
+                alt="Interior mewah kamar tidur Joglo Ageng dengan ranjang kayu jati kuno dan tirai linen lembut" 
+                class="w-full h-full object-cover img-editorial"
+              />
+              <div class="absolute top-4 left-4 bg-wood/90 backdrop-blur-md text-white text-[10px] sm:text-[11px] uppercase tracking-widest px-3 py-1.5 rounded-sm">
+                Master Suite &bull; Private Pool
+              </div>
+              <div class="absolute bottom-4 right-4 bg-stone-900/80 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full">
+                <i class="fa-solid fa-star text-amber-400 mr-1"></i> 4.98
+              </div>
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-5">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <h3 class="font-serif text-2xl sm:text-3xl text-stone-900 dark:text-stone-100">Joglo Ageng</h3>
+                  <p class="text-xs uppercase tracking-widest text-stone-500 mt-0.5">Heritage Master Villa</p>
+                </div>
+                <div class="text-right">
+                  <span class="block text-[10px] uppercase tracking-wider text-stone-500">
+                    <span class="lang-id">Mulai dari</span>
+                    <span class="lang-en">Starts from</span>
+                  </span>
+                  <span class="font-serif text-xl sm:text-2xl text-wood dark:text-brass font-semibold">Rp 4.500.000</span>
+                  <span class="text-xs text-stone-500">/ night</span>
+                </div>
+              </div>
+
+              <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-light">
+                <span class="lang-id">Unit terbesar dengan atap Joglo Lambang Sari kuno. Dilengkapi infinity pool privat menghadap ngarai hutan, bathtub batu sungai semi-terbuka, dan bale santai.</span>
+                <span class="lang-en">Our signature master villa featuring a 10m saltwater infinity pool over the valley, open-air river stone bathtub, and dedicated 24-hour private butler.</span>
+              </p>
+
+              <!-- Meta Specs -->
+              <div class="grid grid-cols-3 gap-2 py-3 border-y border-stone-200 dark:border-stone-800 text-xs text-stone-600 dark:text-stone-400">
+                <div class="flex items-center space-x-1.5">
+                  <i class="fa-solid fa-users text-stone-400"></i>
+                  <span>4 Guests</span>
+                </div>
+                <div class="flex items-center space-x-1.5">
+                  <i class="fa-solid fa-vector-square text-stone-400"></i>
+                  <span>180 m²</span>
+                </div>
+                <div class="flex items-center space-x-1.5">
+                  <i class="fa-solid fa-water-ladder text-stone-400"></i>
+                  <span>Private Pool</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-1">
+                <a href="detail-unit.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors">
+                  <span class="lang-id">Lihat Detail</span>
+                  <span class="lang-en">View Details</span>
+                  <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
                 </a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <button class="md:hidden text-2xl text-gold focus:outline-none" onclick="toggleMobileMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-        </nav>
-
-        <!-- Mobile Menu Overlay -->
-        <div id="mobileMenu" class="fixed inset-0 bg-darkBg z-40 flex flex-col items-center justify-center space-y-8 transform translate-x-full transition-transform duration-300 md:hidden">
-            <button class="absolute top-6 right-6 text-3xl text-gold focus:outline-none" onclick="toggleMobileMenu()">
-                <i class="fas fa-times"></i>
-            </button>
-            <a href="#beranda" onclick="toggleMobileMenu()" class="text-2xl font-serif hover:text-gold transition">Beranda</a>
-            <a href="#tentang" onclick="toggleMobileMenu()" class="text-2xl font-serif hover:text-gold transition">Tentang</a>
-            <a href="#fasilitas" onclick="toggleMobileMenu()" class="text-2xl font-serif hover:text-gold transition">Fasilitas</a>
-            <a href="#galeri" onclick="toggleMobileMenu()" class="text-2xl font-serif hover:text-gold transition">Galeri</a>
-            <a href="https://wa.me/6281234567890" target="_blank" class="bg-gold text-darkBg px-8 py-3 rounded-full text-lg font-semibold mt-4">Hubungi Kami</a>
-        </div>
-    </header>
-
-    <main>
-        <!-- Hero Section -->
-        <section id="beranda" class="relative h-screen flex items-center justify-center">
-            <!-- Background Image -->
-            <div class="absolute inset-0 z-0">
-                <img src="https://images.unsplash.com/photo-1613490908571-9ce2249b49be?q=80&w=2070&auto=format&fit=crop" alt="Villa Mewah" class="w-full h-full object-cover object-center" />
-                <div class="absolute inset-0 hero-overlay"></div>
-            </div>
-
-            <!-- Hero Content -->
-            <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
-                <p class="reveal text-gold tracking-[0.3em] uppercase text-sm md:text-base mb-4 font-semibold">Selamat Datang di Surga Tersembunyi</p>
-                <h1 class="reveal delay-100 font-serif text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight">
-                    Kemewahan <br><span class="text-gold italic font-light">Tanpa Batas</span>
-                </h1>
-                <p class="reveal delay-200 text-slate-300 text-lg md:text-xl mb-10 font-light max-w-2xl mx-auto">
-                    Rasakan pengalaman menginap eksklusif di villa custom kami yang didesain khusus untuk ketenangan dan kenyamanan Anda.
-                </p>
-                <div class="reveal delay-300 flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="#tentang" class="btn-gold border border-gold text-gold hover:bg-gold hover:text-darkBg px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-widest">
-                        Jelajahi Villa
-                    </a>
-                    <a href="https://wa.me/6281234567890" target="_blank" class="btn-gold bg-gold text-darkBg border border-gold px-8 py-4 rounded-full text-sm font-semibold uppercase tracking-widest flex items-center justify-center gap-2">
-                        <i class="fab fa-whatsapp text-lg"></i> Reservasi
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="tentang" class="py-24 px-6 md:px-12 max-w-7xl mx-auto bg-darkBg">
-            <div class="flex flex-col lg:flex-row items-center gap-16">
-                <!-- Image -->
-                <div class="w-full lg:w-1/2 reveal-zoom">
-                    <div class="relative img-hover-zoom rounded-2xl shadow-2xl">
-                        <div class="absolute inset-0 border-2 border-gold rounded-2xl transform translate-x-4 translate-y-4 -z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop" alt="Interior Villa" class="w-full h-auto rounded-2xl z-10 relative">
-                    </div>
-                </div>
-                <!-- Text -->
-                <div class="w-full lg:w-1/2">
-                    <div class="flex items-center gap-4 mb-4 reveal">
-                        <div class="h-[1px] w-12 bg-gold"></div>
-                        <span class="text-gold tracking-[0.2em] uppercase text-sm">Tentang Kami</span>
-                    </div>
-                    <h2 class="reveal font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
-                        Desain Custom Untuk <span class="text-gold italic">Kenyamanan Anda</span>
-                    </h2>
-                    <p class="reveal text-slate-400 leading-relaxed mb-6">
-                        Villa Custom memadukan arsitektur modern dengan sentuhan alam tropis yang menenangkan. Setiap sudut dirancang dengan teliti untuk memberikan pengalaman visual dan kenyamanan maksimal bagi Anda dan keluarga.
-                    </p>
-                    <p class="reveal text-slate-400 leading-relaxed mb-8">
-                        Dilengkapi dengan *private pool*, interior premium, dan pelayanan setara hotel bintang 5, kami memastikan liburan Anda menjadi momen yang tak terlupakan.
-                    </p>
-                    <a href="https://instagram.com/your_instagram" target="_blank" class="reveal btn-gold inline-flex items-center gap-2 text-gold hover:text-white transition">
-                        <span>Lihat cerita kami di Instagram</span>
-                        <i class="fab fa-instagram text-xl"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Facilities Section -->
-        <section id="fasilitas" class="py-24 px-6 md:px-12 bg-darkCard">
-            <div class="max-w-7xl mx-auto text-center mb-16">
-                <p class="reveal text-gold tracking-[0.2em] uppercase text-sm mb-2">Fasilitas Premium</p>
-                <h2 class="reveal font-serif text-4xl md:text-5xl text-white">Layanan Eksklusif Kami</h2>
-            </div>
-
-            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1 -->
-                <div class="reveal delay-100 bg-darkBg p-8 rounded-2xl border border-slate-700 hover:border-gold transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-gold transition duration-300">
-                        <i class="fas fa-swimming-pool text-3xl text-gold group-hover:text-darkBg transition"></i>
-                    </div>
-                    <h3 class="text-xl font-serif text-white mb-3">Private Pool</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Kolam renang pribadi dengan air hangat dan area bersantai yang luas.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="reveal delay-200 bg-darkBg p-8 rounded-2xl border border-slate-700 hover:border-gold transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-gold transition duration-300">
-                        <i class="fas fa-utensils text-3xl text-gold group-hover:text-darkBg transition"></i>
-                    </div>
-                    <h3 class="text-xl font-serif text-white mb-3">Dapur Modern</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Fasilitas dapur lengkap dengan peralatan memasak berstandar internasional.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="reveal delay-300 bg-darkBg p-8 rounded-2xl border border-slate-700 hover:border-gold transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-gold transition duration-300">
-                        <i class="fas fa-wifi text-3xl text-gold group-hover:text-darkBg transition"></i>
-                    </div>
-                    <h3 class="text-xl font-serif text-white mb-3">High-Speed WiFi</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Koneksi internet super cepat di seluruh area villa untuk kebutuhan Anda.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="reveal delay-100 bg-darkBg p-8 rounded-2xl border border-slate-700 hover:border-gold transition duration-300 transform hover:-translate-y-2 group">
-                    <div class="w-16 h-16 rounded-full bg-slate-800 flex items-center justify-center mb-6 group-hover:bg-gold transition duration-300">
-                        <i class="fas fa-spa text-3xl text-gold group-hover:text-darkBg transition"></i>
-                    </div>
-                    <h3 class="text-xl font-serif text-white mb-3">Layanan Spa</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Layanan pijat dan spa panggilan untuk relaksasi maksimal selama liburan.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Gallery Section -->
-        <section id="galeri" class="py-24 px-6 md:px-12 max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <p class="reveal text-gold tracking-[0.2em] uppercase text-sm mb-2">Galeri Foto</p>
-                <h2 class="reveal font-serif text-4xl md:text-5xl text-white">Menangkap Keindahan</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="reveal img-hover-zoom rounded-xl h-64">
-                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl" alt="Galeri 1">
-                </div>
-                <div class="reveal delay-100 img-hover-zoom rounded-xl h-64 lg:col-span-2">
-                    <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl" alt="Galeri 2">
-                </div>
-                <div class="reveal delay-200 img-hover-zoom rounded-xl h-64 lg:col-span-2">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl" alt="Galeri 3">
-                </div>
-                <div class="reveal delay-300 img-hover-zoom rounded-xl h-64">
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09be1587?q=80&w=2070&auto=format&fit=crop" class="w-full h-full object-cover rounded-xl" alt="Galeri 4">
-                </div>
-            </div>
-        </section>
-
-        <!-- Links & Contact Section -->
-        <section id="kontak" class="py-24 bg-darkCard relative overflow-hidden">
-            <!-- Decorative circle -->
-            <div class="absolute top-0 right-0 w-64 h-64 bg-gold rounded-full blur-[120px] opacity-20"></div>
-            <div class="absolute bottom-0 left-0 w-80 h-80 bg-blue-500 rounded-full blur-[150px] opacity-10"></div>
-
-            <div class="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-                <div class="flex flex-col lg:flex-row gap-16 bg-darkBg p-8 md:p-12 rounded-3xl border border-slate-700 shadow-2xl">
-                    <!-- Text Info -->
-                    <div class="w-full lg:w-1/2">
-                        <h2 class="reveal font-serif text-3xl md:text-4xl text-white mb-6">Siap Untuk Liburan Impian?</h2>
-                        <p class="reveal text-slate-400 mb-8">Hubungi kami melalui WhatsApp untuk ketersediaan tanggal dan dapatkan penawaran harga terbaik. Ikuti juga Instagram kami untuk update terbaru.</p>
-                        
-                        <div class="flex flex-col space-y-4">
-                            <!-- WhatsApp Link -->
-                            <a href="https://wa.me/6281234567890" target="_blank" class="reveal btn-gold flex items-center gap-4 bg-green-600 hover:bg-green-700 text-white p-4 rounded-xl transition w-full md:w-max">
-                                <i class="fab fa-whatsapp text-3xl"></i>
-                                <div>
-                                    <span class="block text-xs uppercase tracking-wider opacity-80">Chat Langsung</span>
-                                    <span class="font-semibold text-lg">WhatsApp Kami</span>
-                                </div>
-                            </a>
-                            <!-- Instagram Link -->
-                            <a href="https://instagram.com/your_instagram" target="_blank" class="reveal delay-100 btn-gold flex items-center gap-4 bg-gradient-to-r from-purple-500 via-pink-500 to-orange-500 text-white p-4 rounded-xl transition w-full md:w-max">
-                                <i class="fab fa-instagram text-3xl"></i>
-                                <div>
-                                    <span class="block text-xs uppercase tracking-wider opacity-80">Ikuti Kami</span>
-                                    <span class="font-semibold text-lg">@VillaCustom_Mewah</span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Google Maps Embed -->
-                    <div class="w-full lg:w-1/2 reveal delay-200">
-                        <div class="w-full h-full min-h-[300px] rounded-2xl overflow-hidden border border-slate-700 shadow-lg relative group">
-                            <!-- Placeholder Map (Ganti URL src dengan iframe embed Google Maps asli Anda) -->
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347863118!2d107.5731165!3d-6.9034443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146a1f93d3e815b2!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1700000000000!5m2!1sen!2sid" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0; min-height: 350px; filter: grayscale(50%) contrast(1.2);" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                            
-                            <!-- Overlay Link ke Aplikasi Google Maps -->
-                            <a href="https://maps.google.com/?q=Bandung" target="_blank" class="absolute inset-0 bg-darkBg/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 backdrop-blur-sm">
-                                <span class="bg-gold text-darkBg px-6 py-3 rounded-full font-semibold flex items-center gap-2 transform translate-y-4 group-hover:translate-y-0 transition duration-300">
-                                    <i class="fas fa-map-marker-alt"></i> Buka di Google Maps
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-black py-12 border-t border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div>
-                <a href="#" class="font-serif text-2xl font-bold tracking-wider text-white mb-4 block">
-                    VILLA <span class="text-gold">CUSTOM</span>
+                <a href="detail-unit.html#pesan" class="px-4 sm:px-5 py-2 text-xs uppercase tracking-wider bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-colors rounded-sm">
+                  <span class="lang-id">Pesan</span>
+                  <span class="lang-en">Book</span>
                 </a>
-                <p class="text-slate-500 text-sm leading-relaxed max-w-xs">
-                    Pengalaman liburan mewah dengan fasilitas kelas atas dan pelayanan profesional di lokasi strategis dan asri.
-                </p>
+              </div>
             </div>
-            <div>
-                <h4 class="text-white font-semibold mb-4 tracking-wider uppercase text-sm">Tautan Cepat</h4>
-                <ul class="space-y-2">
-                    <li><a href="#beranda" class="text-slate-400 hover:text-gold transition text-sm">Beranda</a></li>
-                    <li><a href="#tentang" class="text-slate-400 hover:text-gold transition text-sm">Tentang Kami</a></li>
-                    <li><a href="#fasilitas" class="text-slate-400 hover:text-gold transition text-sm">Fasilitas</a></li>
-                    <li><a href="#galeri" class="text-slate-400 hover:text-gold transition text-sm">Galeri</a></li>
-                </ul>
+          </article>
+
+          <!-- Card 2: Joglo Tirta -->
+          <article class="group bg-white dark:bg-[#211B17] rounded-sm overflow-hidden border border-stone-200/80 dark:border-stone-800/80 shadow-md hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-[280px] sm:h-[360px] md:h-[400px] overflow-hidden">
+              <img 
+                src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=1000&q=80" 
+                alt="Pemandangan teras kayu dan kolam renang tenang Joglo Tirta berpagar dedaunan tropis" 
+                class="w-full h-full object-cover img-editorial"
+              />
+              <div class="absolute top-4 left-4 bg-forest/90 backdrop-blur-md text-white text-[10px] sm:text-[11px] uppercase tracking-widest px-3 py-1.5 rounded-sm">
+                Sanctuary &bull; Lagoon View
+              </div>
+              <div class="absolute bottom-4 right-4 bg-stone-900/80 backdrop-blur-md text-white text-xs px-2.5 py-1 rounded-full">
+                <i class="fa-solid fa-star text-amber-400 mr-1"></i> 4.95
+              </div>
             </div>
-            <div>
-                <h4 class="text-white font-semibold mb-4 tracking-wider uppercase text-sm">Kontak Kami</h4>
-                <p class="text-slate-400 text-sm mb-2"><i class="fas fa-map-marker-alt text-gold w-5"></i> Jl. Raya Resort Mewah No. 1, Pegunungan</p>
-                <p class="text-slate-400 text-sm mb-2"><i class="fas fa-phone text-gold w-5"></i> +62 812 3456 7890</p>
-                <p class="text-slate-400 text-sm mb-4"><i class="fas fa-envelope text-gold w-5"></i> info@villacustom.com</p>
+
+            <div class="p-6 sm:p-8 space-y-5">
+              <div class="flex items-baseline justify-between">
+                <div>
+                  <h3 class="font-serif text-2xl sm:text-3xl text-stone-900 dark:text-stone-100">Joglo Tirta</h3>
+                  <p class="text-xs uppercase tracking-widest text-stone-500 mt-0.5">Water Pavilion Suite</p>
+                </div>
+                <div class="text-right">
+                  <span class="block text-[10px] uppercase tracking-wider text-stone-500">
+                    <span class="lang-id">Mulai dari</span>
+                    <span class="lang-en">Starts from</span>
+                  </span>
+                  <span class="font-serif text-xl sm:text-2xl text-wood dark:text-brass font-semibold">Rp 3.850.000</span>
+                  <span class="text-xs text-stone-500">/ night</span>
+                </div>
+              </div>
+
+              <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm leading-relaxed font-light">
+                <span class="lang-id">Dikelilingi kolam teratai tenang dan suara gemericik air alami. Ideal untuk pasangan yang mencari momen intim, dengan ranjang berkanopi linen dan plunge pool privat.</span>
+                <span class="lang-en">An intimate romantic suite suspended over serene lotus pools, boasting a private plunge pool, king canopy bed, and outdoor rain shower.</span>
+              </p>
+
+              <!-- Meta Specs -->
+              <div class="grid grid-cols-3 gap-2 py-3 border-y border-stone-200 dark:border-stone-800 text-xs text-stone-600 dark:text-stone-400">
+                <div class="flex items-center space-x-1.5">
+                  <i class="fa-solid fa-users text-stone-400"></i>
+                  <span>2 Guests</span>
+                </div>
+                <div class="flex items-center space-x-1.5">
+                  <i class="fa-solid fa-vector-square text-stone-400"></i>
+                  <span>140 m²</span>
+                </div>
+                <div class="flex items-center space-x-1.5">
+                  <i class="fa-solid fa-bath text-stone-400"></i>
+                  <span>Outdoor Bath</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-1">
+                <a href="stay.html" class="inline-flex items-center text-xs uppercase tracking-[0.2em] font-semibold text-stone-900 dark:text-white hover:text-brass transition-colors">
+                  <span class="lang-id">Lihat Detail</span>
+                  <span class="lang-en">View Details</span>
+                  <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
+                </a>
+                <a href="stay.html" class="px-4 sm:px-5 py-2 text-xs uppercase tracking-wider bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-colors rounded-sm">
+                  <span class="lang-id">Pesan</span>
+                  <span class="lang-en">Book</span>
+                </a>
+              </div>
             </div>
+          </article>
+
         </div>
-        <div class="max-w-7xl mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-slate-800 text-center text-slate-600 text-sm flex flex-col md:flex-row justify-between items-center">
-            <p>&copy; 2026 Villa Custom. All rights reserved.</p>
-            <div class="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" class="hover:text-gold transition text-lg"><i class="fab fa-facebook"></i></a>
-                <a href="#" class="hover:text-gold transition text-lg"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="hover:text-gold transition text-lg"><i class="fab fa-youtube"></i></a>
-            </div>
+
+        <!-- View All Units CTA -->
+        <div class="text-center pt-4" data-aos="fade-up">
+          <a href="stay.html" class="inline-flex items-center px-6 sm:px-8 py-3.5 sm:py-4 bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 text-white font-semibold text-xs uppercase tracking-[0.22em] transition-all duration-300 shadow-md hover:shadow-xl rounded-sm">
+            <span class="lang-id">Lihat Semua 4 Tipe Villa Joglo</span>
+            <span class="lang-en">Explore All 4 Villa Suites</span>
+            <i class="fa-solid fa-arrow-right ml-2.5"></i>
+          </a>
         </div>
-    </footer>
 
-    <!-- JavaScript for Animations and Interactions -->
-    <script>
-        // Navbar Scrolled Effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('nav-scrolled');
-                navbar.classList.remove('py-4');
-                navbar.classList.add('py-2');
-            } else {
-                navbar.classList.remove('nav-scrolled');
-                navbar.classList.add('py-4');
-                navbar.classList.remove('py-2');
-            }
-        });
+      </div>
+    </section>
 
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('translate-x-full');
-        }
+    <!-- ==========================================
+         SECTION 3: CURATED EXPERIENCES
+         ========================================== -->
+    <section id="pengalaman" class="py-20 md:py-32 px-4 sm:px-6 max-w-7xl mx-auto w-full">
+      <div class="text-center max-w-3xl mx-auto space-y-3 mb-12 sm:mb-16" data-aos="fade-up">
+        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brass">
+          <span class="lang-id">Pengalaman Eksklusif</span>
+          <span class="lang-en">Curated Experiences</span>
+        </span>
+        <h2 class="font-serif text-2xl sm:text-4xl md:text-5xl font-normal text-stone-900 dark:text-stone-100">
+          <span class="lang-id">Menenun Waktu, Menyentuh Hening</span>
+          <span class="lang-en">Weaving Time, Embracing Stillness</span>
+        </h2>
+        <p class="text-stone-600 dark:text-stone-400 text-xs sm:text-sm md:text-base font-light leading-relaxed">
+          <span class="lang-id">Setiap momen di Villa Joglo dikurasi untuk mengembalikan ritme alami tubuh Anda, jauh dari hiruk-pikuk kesibukan urban.</span>
+          <span class="lang-en">Every ritual at Villa Joglo is tailored to gently restore your circadian rhythm, far removed from modern clamor.</span>
+        </p>
+      </div>
 
-        // Intersection Observer for Scroll Animations
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.15 // Trigger when 15% of element is visible
-            };
+      <!-- Experience Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
 
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('active');
-                        // Optional: stop observing once animated
-                        // observer.unobserve(entry.target); 
-                    }
-                });
-            }, observerOptions);
+        <!-- Exp 1 -->
+        <div class="group space-y-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="overflow-hidden rounded-sm relative aspect-[4/5]">
+            <img 
+              src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?auto=format&fit=crop&w=800&q=80" 
+              alt="Ritual mandi bunga dan rempah tradisional dalam bathtub batu alam di bawah langit terbuka" 
+              class="w-full h-full object-cover img-editorial"
+            />
+            <div class="absolute inset-0 bg-stone-900/20 group-hover:bg-transparent transition-colors"></div>
+          </div>
+          <div class="space-y-1.5">
+            <span class="text-[10px] uppercase tracking-widest text-brass font-medium">Wellness & Ritual</span>
+            <h3 class="font-serif text-xl sm:text-2xl text-stone-900 dark:text-stone-100">
+              <span class="lang-id">Ritual Jamu & Mandi Rempah</span>
+              <span class="lang-en">Jamu Elixir & Herbal Bath</span>
+            </h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed font-light">
+              <span class="lang-id">Racikan jamu segar kunyit asam dan beras kencur hangat dari resep keraton, dilanjutkan mandi rempah aromaterapi di bathtub batu sungai.</span>
+              <span class="lang-en">Freshly prepared royal court herbal elixirs followed by botanical blossom soak in carved monolithic river stone baths.</span>
+            </p>
+          </div>
+        </div>
 
-            // Select all elements to animate
-            const revealElements = document.querySelectorAll('.reveal, .reveal-zoom');
-            revealElements.forEach(el => observer.observe(el));
-        });
-    </script>
+        <!-- Exp 2 -->
+        <div class="group space-y-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="overflow-hidden rounded-sm relative aspect-[4/5]">
+            <img 
+              src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" 
+              alt="Sajian floating breakfast organik di kolam renang privat berlatar kabut pagi perbukitan" 
+              class="w-full h-full object-cover img-editorial"
+            />
+            <div class="absolute inset-0 bg-stone-900/20 group-hover:bg-transparent transition-colors"></div>
+          </div>
+          <div class="space-y-1.5">
+            <span class="text-[10px] uppercase tracking-widest text-brass font-medium">Organic Gastronomy</span>
+            <h3 class="font-serif text-xl sm:text-2xl text-stone-900 dark:text-stone-100">
+              <span class="lang-id">Artisanal Floating Breakfast</span>
+              <span class="lang-en">Artisanal Floating Breakfast</span>
+            </h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed font-light">
+              <span class="lang-id">Sarapan lezat di bale terbuka atau terapung di kolam privat. Disiapkan oleh koki pribadi menggunakan sayuran segar dari kebun organik.</span>
+              <span class="lang-en">Exquisite morning spreads served floating in your private pool or at the pavilion, crafted from hillside organic gardens.</span>
+            </p>
+          </div>
+        </div>
+
+        <!-- Exp 3 -->
+        <div class="group space-y-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="overflow-hidden rounded-sm relative aspect-[4/5]">
+            <img 
+              src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" 
+              alt="Makan malam romantis dengan lentera lilin tembaga di gazebo kayu jati di tengah kebun tropis" 
+              class="w-full h-full object-cover img-editorial"
+            />
+            <div class="absolute inset-0 bg-stone-900/20 group-hover:bg-transparent transition-colors"></div>
+          </div>
+          <div class="space-y-1.5">
+            <span class="text-[10px] uppercase tracking-widest text-brass font-medium">Bespoke Dining</span>
+            <h3 class="font-serif text-xl sm:text-2xl text-stone-900 dark:text-stone-100">
+              <span class="lang-id">Malam Berbintang & Lentera</span>
+              <span class="lang-en">Starlit Lantern Dinners</span>
+            </h3>
+            <p class="text-xs text-stone-600 dark:text-stone-400 leading-relaxed font-light">
+              <span class="lang-id">Makan malam intim multi-course dengan iringan gamelan lembut dan kerlap-kerlip lentera tembaga di bawah taburan bintang malam tropis.</span>
+              <span class="lang-en">Candlelit multi-course dinners serenaded by delicate Javanese gamelan music under canopy of tropical stars.</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 4: GUEST STORIES
+         ========================================== -->
+    <section class="py-20 bg-stone-900 text-stone-100 relative overflow-hidden w-full max-w-full">
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#C09A67_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+      <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center space-y-6" data-aos="zoom-in">
+        <i class="fa-solid fa-quote-left text-2xl text-brass"></i>
+        
+        <blockquote class="font-serif text-xl sm:text-3xl leading-relaxed italic font-light text-stone-200">
+          <span class="lang-id">"Menginap di Villa Joglo terasa seperti melangkah ke dimensi waktu yang damai. Aroma kayu jati yang khas saat bangun pagi, gemericik air, dan pelayanan butler yang begitu tulus membuat jiwa kami benar-benar terisi kembali."</span>
+          <span class="lang-en">"Staying at Villa Joglo felt like stepping into an era of sublime peace. The gentle aroma of heritage teak at dawn, the rustling bamboo, and the discreet yet warm butler service revitalized our souls completely."</span>
+        </blockquote>
+
+        <div class="pt-2 space-y-1">
+          <p class="font-sans text-xs sm:text-sm font-semibold tracking-widest uppercase text-stone-100">Darmawan & Clara</p>
+          <p class="text-[10px] sm:text-xs tracking-wider text-brass">Architect & Interior Designer &bull; Jakarta</p>
+          <div class="flex justify-center space-x-1 text-amber-400 text-[11px] pt-1">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION 5: INVITATION CTA & CONCIERGE
+         ========================================== -->
+    <section id="kontak" class="py-20 px-4 sm:px-6 max-w-5xl mx-auto w-full">
+      <div class="bg-gradient-to-br from-[#F3ECE2] to-[#FAF7F2] dark:from-[#191411] dark:to-[#211B17] border border-stone-300 dark:border-stone-800 p-6 sm:p-12 md:p-16 rounded-sm text-center space-y-6 shadow-xl" data-aos="fade-up">
+        
+        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brass">Private Sanctuary Reservation</span>
+        
+        <h2 class="font-serif text-2xl sm:text-4xl md:text-5xl font-normal text-stone-900 dark:text-stone-100">
+          <span class="lang-id">Mulailah Cerita Ketenangan Anda</span>
+          <span class="lang-en">Begin Your Journey of Stillness</span>
+        </h2>
+
+        <p class="max-w-xl mx-auto text-stone-600 dark:text-stone-400 text-xs sm:text-sm md:text-base font-light leading-relaxed">
+          <span class="lang-id">Ketersediaan unit kami dijaga sangat terbatas demi menjaga kemurnian privasi dan eksklusivitas para tamu. Hubungi concierge kami untuk penawaran istimewa dan reservasi langsung tanpa perantara.</span>
+          <span class="lang-en">Our suites remain strictly limited to preserve uncompromising seclusion. Connect with our private concierge for tailored direct booking privileges.</span>
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
+          <a href="https://wa.me/6281234567890?text=Halo%20Concierge%20Villa%20Joglo,%20saya%20tertarik%20untuk%20reservasi%20penginapan." target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-7 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-xs uppercase tracking-[0.2em] transition-all rounded-sm flex items-center justify-center space-x-2.5 shadow-md">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span class="lang-id">Konsultasi Via WhatsApp</span>
+            <span class="lang-en">Chat via WhatsApp</span>
+          </a>
+          <a href="stay.html" class="w-full sm:w-auto px-7 py-3.5 bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 text-white font-semibold text-xs uppercase tracking-[0.2em] transition-all rounded-sm">
+            <span class="lang-id">Daftar Unit & Tarif</span>
+            <span class="lang-en">View Villas & Rates</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer class="bg-[#120E0C] text-stone-300 border-t border-stone-800 pt-14 pb-10 px-4 sm:px-6 w-full max-w-full">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-stone-800/80">
+      
+      <!-- Brand Column -->
+      <div class="lg:col-span-5 space-y-4">
+        <span class="font-serif text-2xl tracking-[0.2em] font-semibold text-stone-100 uppercase">Villa Joglo</span>
+        <p class="text-xs uppercase tracking-[0.3em] text-brass">Heritage Sanctuary</p>
+        <p class="text-stone-400 text-xs sm:text-sm font-light leading-relaxed max-w-sm">
+          <span class="lang-id">Peristirahatan eksklusif yang memadukan keaslian cagar budaya Rumah Joglo Jawa dengan kemewahan kenyamanan modern di pelukan alam tropis yang tenang.</span>
+          <span class="lang-en">A boutique sanctuary intertwining authentic century-old Javanese Joglo heritage with understated modern luxury in lush tropical valleys.</span>
+        </p>
+        <div class="pt-2 text-xs text-stone-500 space-y-1">
+          <p><i class="fa-solid fa-location-dot text-brass mr-2"></i> Lembah Candi Selo, Kaki Perbukitan Menoreh, Yogyakarta</p>
+          <p><i class="fa-solid fa-phone text-brass mr-2"></i> +62 812-3456-7890 &bull; +62 274-889900</p>
+          <p><i class="fa-solid fa-envelope text-brass mr-2"></i> concierge@villajoglo.com</p>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="lg:col-span-2 space-y-3">
+        <h4 class="text-xs uppercase tracking-[0.25em] font-semibold text-stone-100">
+          <span class="lang-id">Navigasi</span>
+          <span class="lang-en">Navigation</span>
+        </h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><a href="index.html" class="hover:text-brass transition-colors text-brass font-medium">Home</a></li>
+          <li><a href="stay.html" class="hover:text-brass transition-colors">Villas & Suites</a></li>
+          <li><a href="detail-unit.html" class="hover:text-brass transition-colors">Joglo Ageng</a></li>
+          <li><a href="#filosofi" class="hover:text-brass transition-colors">Philosophy</a></li>
+          <li><a href="#pengalaman" class="hover:text-brass transition-colors">Experiences</a></li>
+        </ul>
+      </div>
+
+      <!-- Units Directory -->
+      <div class="lg:col-span-2 space-y-3">
+        <h4 class="text-xs uppercase tracking-[0.25em] font-semibold text-stone-100">
+          <span class="lang-id">Koleksi Unit</span>
+          <span class="lang-en">Villa Collection</span>
+        </h4>
+        <ul class="space-y-2 text-xs text-stone-400">
+          <li><a href="detail-unit.html" class="hover:text-brass transition-colors">Joglo Ageng (Master)</a></li>
+          <li><a href="stay.html" class="hover:text-brass transition-colors">Joglo Tirta (Water)</a></li>
+          <li><a href="stay.html" class="hover:text-brass transition-colors">Joglo Sekar (Garden)</a></li>
+          <li><a href="stay.html" class="hover:text-brass transition-colors">Joglo Lawas (Family)</a></li>
+        </ul>
+      </div>
+
+      <!-- Social & Newsletter -->
+      <div class="lg:col-span-3 space-y-3">
+        <h4 class="text-xs uppercase tracking-[0.25em] font-semibold text-stone-100">
+          <span class="lang-id">Warta Keheningan</span>
+          <span class="lang-en">Sanctuary Gazette</span>
+        </h4>
+        <p class="text-xs text-stone-400 font-light">
+          <span class="lang-id">Dapatkan warta musim teratai mekar, penawaran rahasia, dan jurnal kehidupan sanctuary kami.</span>
+          <span class="lang-en">Receive serene seasonal musings, private reservation offerings, and cultural journals.</span>
+        </p>
+        <form class="space-y-2" onsubmit="event.preventDefault(); alert('Terima kasih telah bergabung dengan Warta Villa Joglo.');">
+          <input 
+            type="email" 
+            placeholder="Email address" 
+            required 
+            class="w-full px-3.5 py-2 bg-stone-900 border border-stone-800 rounded-sm text-xs text-stone-200 placeholder-stone-500 focus:outline-none focus:border-brass"
+          />
+          <button type="submit" class="w-full py-2 bg-wood hover:bg-brass hover:text-stone-950 text-white font-semibold text-[10px] uppercase tracking-widest transition-colors rounded-sm">
+            <span class="lang-id">Langganan Warta</span>
+            <span class="lang-en">Subscribe</span>
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Sub-footer -->
+    <div class="max-w-7xl mx-auto pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-stone-500">
+      <p>&copy; 2026 Villa Joglo Heritage Sanctuary. All Rights Reserved.</p>
+      <div class="flex space-x-5 mt-3 sm:mt-0">
+        <a href="#" class="hover:text-stone-300">Privacy Policy</a>
+        <a href="#" class="hover:text-stone-300">Terms of Stay</a>
+        <a href="#" class="hover:text-stone-300">Location Map</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
