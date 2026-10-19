@@ -1,0 +1,16 @@
+# ==========================================
+# Villa Joglo - Search Engine Robots Configuration
+# https://custom-villa.vercel.app / https://villajoglo.com
+# ==========================================
+
+User-agent: *
+Allow: /
+
+# Allow crawling of CSS, JS, and Images for Core Web Vitals
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /stay/
+
+# Sitemaps for Google, Bing, and other search engines
+Sitemap: https://custom-villa.vercel.app/sitemap.xml
+Sitemap: https://villajoglo.com/sitemap.xml

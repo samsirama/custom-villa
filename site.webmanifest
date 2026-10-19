@@ -1,0 +1,17 @@
+{
+  "name": "Villa Joglo Heritage Sanctuary",
+  "short_name": "Villa Joglo",
+  "description": "Peristirahatan eksklusif berarsitektur kayu jati kuno dengan private infinity pool di Yogyakarta.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#120E0C",
+  "theme_color": "#120E0C",
+  "icons": [
+    {
+      "src": "/assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

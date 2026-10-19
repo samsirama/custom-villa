@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- 1. Beranda / Homepage -->
+  <url>
+    <loc>https://custom-villa.vercel.app/</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://custom-villa.vercel.app/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://custom-villa.vercel.app/" />
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Villa Joglo Heritage Sanctuary - Luxury Javanese Architecture</image:title>
+      <image:caption>Peristirahatan eksklusif berarsitektur kayu jati kuno ratusan tahun dengan kolam renang infinity alami.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 2. Pilihan Kamar & Tipe Villa / Stay Collection -->
+  <url>
+    <loc>https://custom-villa.vercel.app/stay</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="id" href="https://custom-villa.vercel.app/stay" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://custom-villa.vercel.app/stay" />
+  </url>
+
+  <!-- 3. Joglo Ageng - Master Suite with Private Pool -->
+  <url>
+    <loc>https://custom-villa.vercel.app/stay/joglo-ageng</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Joglo Ageng Master Suite - Luxury Private Pool Villa</image:title>
+      <image:caption>Villa utama 180 m² dengan private infinity pool 10 meter dan ranjang kayu jati kuno super king.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 4. Joglo Tirta - Water Pavilion Suite -->
+  <url>
+    <loc>https://custom-villa.vercel.app/stay/joglo-tirta</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Joglo Tirta Romantic Water Pavilion</image:title>
+      <image:caption>Paviliun romantis 140 m² mengapung di atas laguna teratai dengan private plunge pool.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 5. Joglo Sekar - Botanical Garden Pavilion -->
+  <url>
+    <loc>https://custom-villa.vercel.app/stay/joglo-sekar</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Joglo Sekar Garden Sanctuary</image:title>
+      <image:caption>Paviliun taman asri 110 m² dikelilingi kebun bunga kamboja wangi dan shower batu alam semi-outdoor.</image:caption>
+    </image:image>
+  </url>
+
+  <!-- 6. Joglo Lawas - Family Heritage Sanctuary -->
+  <url>
+    <loc>https://custom-villa.vercel.app/stay/joglo-lawas</loc>
+    <lastmod>2026-10-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&amp;fit=crop&amp;w=1200&amp;q=80</image:loc>
+      <image:title>Joglo Lawas 2-Bedroom Family Sanctuary</image:title>
+      <image:caption>Villa keluarga 210 m² dengan pendopo ruang tamu terbuka abad ke-19 dan inner courtyard plunge pool.</image:caption>
+    </image:image>
+  </url>
+
+</urlset>

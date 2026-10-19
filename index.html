@@ -13,7 +13,12 @@
   <meta name="keywords" content="sewa villa joglo, villa joglo mewah, luxury joglo resort, penginapan tradisional eksklusif, private villa jogja, boutique resort indonesia, heritage sanctuary" />
   <meta name="author" content="Villa Joglo Heritage Sanctuary" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://villajoglo.com/index.html" />
+  <link rel="canonical" href="https://custom-villa.vercel.app/" />
+  
+  <!-- Favicon & Web App Manifest -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#120E0C" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
@@ -32,6 +37,12 @@
   <meta name="twitter:description" content="Cagar peristirahatan privat dengan arsitektur kayu jati antik dan ketenangan jiwa." />
   <meta name="twitter:image" content="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80" />
 
+  <!-- Local SEO & Geo Targeting -->
+  <meta name="geo.region" content="ID-YO" />
+  <meta name="geo.placename" content="Yogyakarta" />
+  <meta name="geo.position" content="-7.6079;110.2038" />
+  <meta name="ICBM" content="-7.6079, 110.2038" />
+
   <!-- Structured Data: JSON-LD for LodgingBusiness -->
   <script type="application/ld+json">
   {
@@ -39,10 +50,10 @@
     "@type": "LodgingBusiness",
     "name": "Villa Joglo Heritage Sanctuary",
     "description": "Peristirahatan eksklusif bertaraf bintang lima dengan arsitektur Rumah Joglo Jawa otentik dari kayu jati kuno, fasilitas kolam renang pribadi, dan pemandangan lembah tropis alami.",
-    "url": "https://villajoglo.com",
+    "url": "https://custom-villa.vercel.app",
     "image": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1200&q=80",
     "telephone": "+6281234567890",
-    "priceRange": "Rp 2.800.000 - Rp 6.500.000",
+    "priceRange": "Rp 2.950.000 - Rp 5.200.000",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Jalan Lembah Kayu Manis No. 8, Dusun Candi Selo",
@@ -78,6 +89,56 @@
       "ratingValue": "4.96",
       "reviewCount": "148"
     }
+  }
+  </script>
+
+  <!-- Structured Data: FAQPage Schema for Google Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Berapa tarif menginap per malam di Villa Joglo dan apa saja fasilitas yang didapatkan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tarif menginap berkisar antara Rp 2.950.000 hingga Rp 5.200.000 per malam, sudah termasuk sarapan organik artisanal untuk 2-6 orang, welcoming jamu herbal, afternoon tea privat di teras, dan layanan personal butler 24 jam."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Apakah setiap unit villa dilengkapi dengan kolam renang privat (private pool)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ya, unit Joglo Ageng dilengkapi private infinity pool sepanjang 10 meter, Joglo Tirta memiliki private plunge pool di atas kolam teratai, Joglo Lawas memiliki courtyard dip pool, dan Joglo Sekar memiliki bathtub batu kali semi-outdoor."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bagaimana cara reservasi langsung (direct booking) untuk mendapatkan jaminan harga terbaik?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reservasi langsung dapat dilakukan melalui tombol WhatsApp Direct Concierge resmi di website ini untuk jaminan tarif terendah tanpa komisi perantara OTA, prioritas pemilihan unit, dan keistimewaan check-in fleksibel."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Berapa jarak dan waktu tempuh Villa Joglo dari Bandara Internasional Yogyakarta (YIA)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Villa Joglo berjarak sekitar 45 menit perjalanan dari Bandara Internasional Yogyakarta (YIA) dan 35 menit dari pusat kota Yogyakarta (Malioboro & Keraton). Tersedia layanan antar-jemput bandara privat dengan mobil berpendingin udara."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Berapa kapasitas maksimal tamu untuk setiap tipe unit villa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Joglo Tirta dan Joglo Sekar dirancang untuk 2 tamu dewasa (honeymoon sanctuary), Joglo Ageng menampung hingga 4 tamu, dan Joglo Lawas 2-Bedroom menampung 4 hingga 6 orang keluarga."
+        }
+      }
+    ]
   }
   </script>
 
@@ -902,6 +963,117 @@
             <i class="fa-solid fa-star"></i>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         SECTION: FAQ (Pertanyaan yang Sering Diajukan)
+         High-Impact SEO & Rich Snippets Integration
+         ========================================== -->
+    <section id="faq" class="py-20 px-4 sm:px-6 max-w-4xl mx-auto w-full" aria-label="Pertanyaan Umum">
+      <div class="text-center space-y-3 mb-12 sm:mb-16" data-aos="fade-up">
+        <span class="text-xs uppercase tracking-[0.3em] font-semibold text-brass">
+          <span class="lang-id">Informasi &amp; Pertanyaan Tamu</span>
+          <span class="lang-en">Guest Information &amp; FAQ</span>
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-normal text-stone-900 dark:text-stone-100">
+          <span class="lang-id">Pertanyaan yang Sering Diajukan</span>
+          <span class="lang-en">Frequently Asked Questions</span>
+        </h2>
+        <p class="max-w-xl mx-auto text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed">
+          <span class="lang-id">Segala informasi penting seputar kenyamanan, fasilitas privat, dan kemudahan reservasi di Villa Joglo.</span>
+          <span class="lang-en">Essential details regarding your stay, private amenities, and effortless reservation at Villa Joglo.</span>
+        </p>
+        <div class="w-16 h-[1px] bg-brass mx-auto mt-4"></div>
+      </div>
+
+      <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
+        
+        <!-- FAQ 1 -->
+        <details class="group bg-white dark:bg-[#211B17] border border-stone-200 dark:border-stone-800 rounded-sm p-5 sm:p-6 transition-all duration-300 open:shadow-md">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-serif text-base sm:text-lg text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors font-medium">
+            <span>
+              <span class="lang-id">Berapa tarif menginap per malam di Villa Joglo dan apa saja yang sudah termasuk?</span>
+              <span class="lang-en">What are the nightly rates at Villa Joglo and what is included?</span>
+            </span>
+            <span class="ml-4 shrink-0 text-brass text-sm transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed border-t border-stone-100 dark:border-stone-800/60 mt-3">
+            <span class="lang-id">Tarif menginap berkisar antara Rp 2.950.000 (Joglo Sekar) hingga Rp 5.200.000 (Joglo Lawas 2-Bedroom) per malam. Seluruh tarif sudah termasuk santapan <em>artisanal organic breakfast</em> untuk 2-6 orang, <em>complimentary welcome herbal jamu drink</em>, afternoon tea di teras privat, akses Wi-Fi berkecepatan tinggi, serta layanan <strong>personal butler 24 jam</strong>.</span>
+            <span class="lang-en">Nightly rates range from Rp 2,950,000 (Joglo Sekar) to Rp 5,200,000 (Joglo Lawas 2-Bedroom). All stays include bespoke organic breakfast for 2-6 guests, complimentary welcoming herbal jamu, afternoon tea on your private terrace, high-speed Wi-Fi, and 24-hour dedicated butler service.</span>
+          </div>
+        </details>
+
+        <!-- FAQ 2 -->
+        <details class="group bg-white dark:bg-[#211B17] border border-stone-200 dark:border-stone-800 rounded-sm p-5 sm:p-6 transition-all duration-300 open:shadow-md">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-serif text-base sm:text-lg text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors font-medium">
+            <span>
+              <span class="lang-id">Apakah setiap unit villa dilengkapi dengan kolam renang privat (private pool)?</span>
+              <span class="lang-en">Does each villa unit feature a private pool?</span>
+            </span>
+            <span class="ml-4 shrink-0 text-brass text-sm transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed border-t border-stone-100 dark:border-stone-800/60 mt-3">
+            <span class="lang-id">Ya, sebagian besar unit kami dirancang dengan fasilitas air privat eksklusif. <strong>Joglo Ageng</strong> memiliki private infinity pool sepanjang 10 meter menghadap hutan tropis, <strong>Joglo Tirta</strong> memiliki private plunge pool di atas kolam teratai, <strong>Joglo Lawas</strong> dilengkapi inner courtyard pool privat, dan <strong>Joglo Sekar</strong> memiliki bathtub batu sungai alam semi-terbuka.</span>
+            <span class="lang-en">Yes, our pavilions are crafted with exclusive private aquatic amenities. <strong>Joglo Ageng</strong> boasts a 10-meter private infinity pool facing the tropical forest, <strong>Joglo Tirta</strong> features an intimate private plunge pool over the lotus lagoon, <strong>Joglo Lawas</strong> offers a private inner courtyard dip pool, and <strong>Joglo Sekar</strong> features a soothing semi-outdoor river stone bathtub.</span>
+          </div>
+        </details>
+
+        <!-- FAQ 3 -->
+        <details class="group bg-white dark:bg-[#211B17] border border-stone-200 dark:border-stone-800 rounded-sm p-5 sm:p-6 transition-all duration-300 open:shadow-md">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-serif text-base sm:text-lg text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors font-medium">
+            <span>
+              <span class="lang-id">Bagaimana cara reservasi langsung (direct booking) untuk jaminan harga terbaik?</span>
+              <span class="lang-en">How do I make a direct reservation for the best guaranteed rate?</span>
+            </span>
+            <span class="ml-4 shrink-0 text-brass text-sm transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed border-t border-stone-100 dark:border-stone-800/60 mt-3">
+            <span class="lang-id">Anda dapat langsung menghubungi concierge kami melalui tombol <strong>WhatsApp Direct Concierge</strong> resmi di website ini. Melalui direct booking, Anda dijamin mendapatkan harga terendah tanpa komisi perantara (OTAs), jaminan unit favorit, serta keistimewaan <em>early check-in &amp; late check-out</em> fleksibel.</span>
+            <span class="lang-en">You can directly connect with our dedicated concierge via the official <strong>WhatsApp Direct Concierge</strong> buttons on this site. Direct booking guarantees our lowest rates with zero third-party commission fees, preferred suite selection, and flexible early check-in or late check-out privileges.</span>
+          </div>
+        </details>
+
+        <!-- FAQ 4 -->
+        <details class="group bg-white dark:bg-[#211B17] border border-stone-200 dark:border-stone-800 rounded-sm p-5 sm:p-6 transition-all duration-300 open:shadow-md">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-serif text-base sm:text-lg text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors font-medium">
+            <span>
+              <span class="lang-id">Berapa jarak dan waktu tempuh Villa Joglo dari Bandara Yogyakarta (YIA) dan pusat kota?</span>
+              <span class="lang-en">What is the distance and travel time from Yogyakarta Airport (YIA) and the city?</span>
+            </span>
+            <span class="ml-4 shrink-0 text-brass text-sm transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed border-t border-stone-100 dark:border-stone-800/60 mt-3">
+            <span class="lang-id">Villa Joglo berjarak sekitar 45 menit perjalanan dari Bandara Internasional Yogyakarta (YIA) dan 35 menit dari pusat budaya Yogyakarta (Malioboro &amp; Keraton). Kami menyediakan layanan penjemputan bandara privat ber-AC dengan pengemudi ramah atas permintaan tamu.</span>
+            <span class="lang-en">Villa Joglo is situated approximately 45 minutes from Yogyakarta International Airport (YIA) and 35 minutes from historic downtown Yogyakarta (Malioboro &amp; Keraton). We provide private chauffeured air-conditioned airport transfers upon request.</span>
+          </div>
+        </details>
+
+        <!-- FAQ 5 -->
+        <details class="group bg-white dark:bg-[#211B17] border border-stone-200 dark:border-stone-800 rounded-sm p-5 sm:p-6 transition-all duration-300 open:shadow-md">
+          <summary class="flex justify-between items-center cursor-pointer list-none font-serif text-base sm:text-lg text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors font-medium">
+            <span>
+              <span class="lang-id">Berapa kapasitas maksimal tamu untuk setiap tipe unit Joglo?</span>
+              <span class="lang-en">What is the maximum guest occupancy for each pavilion?</span>
+            </span>
+            <span class="ml-4 shrink-0 text-brass text-sm transition-transform duration-300 group-open:rotate-180">
+              <i class="fa-solid fa-chevron-down"></i>
+            </span>
+          </summary>
+          <div class="pt-4 text-xs sm:text-sm text-stone-600 dark:text-stone-400 font-light leading-relaxed border-t border-stone-100 dark:border-stone-800/60 mt-3">
+            <span class="lang-id"><strong>Joglo Tirta</strong> dan <strong>Joglo Sekar</strong> dirancang untuk 2 orang dewasa (sangat ideal untuk honeymoon). <strong>Joglo Ageng</strong> dapat menampung hingga 4 tamu dengan opsi extra bed. Sedangkan <strong>Joglo Lawas</strong> memiliki 2 kamar tidur utama mandiri yang dapat menampung 4 hingga 6 orang keluarga dengan leluasa.</span>
+            <span class="lang-en"><strong>Joglo Tirta</strong> and <strong>Joglo Sekar</strong> are tailored for 2 adults (ideal for couples and honeymoons). <strong>Joglo Ageng</strong> accommodates up to 4 guests with luxury extra bedding. <strong>Joglo Lawas</strong> offers two separate master suites, comfortably accommodating 4 to 6 family members.</span>
+          </div>
+        </details>
+
       </div>
     </section>
 

@@ -302,3 +302,16 @@ html.dark ::selection {
 .unit-fade-in {
   animation: unitFilterFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* ==========================================================================
+   DETAILS / SUMMARY FAQ STYLING
+   ========================================================================== */
+summary::-webkit-details-marker,
+summary::marker {
+  display: none;
+  content: "";
+}
+
+details[open] summary {
+  color: var(--color-gold);
+}
