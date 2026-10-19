@@ -166,58 +166,64 @@
   <!-- ==========================================
        HEADER & NAVIGATION BAR (FULLY RESPONSIVE)
        ========================================== -->
-  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 md:py-6 px-4 sm:px-6 md:px-12 w-full max-w-full">
-    <div class="max-w-7xl mx-auto flex items-center justify-between w-full">
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-3 sm:py-4 md:py-6 px-3 sm:px-6 md:px-12 w-full">
+    <div class="flex items-center justify-between w-full gap-2">
       
-      <!-- LEFT SECTION: Hamburger Button (Garis 3) + Language Switcher -->
-      <div class="flex items-center space-x-2.5 sm:space-x-4 shrink-0">
+      <!-- LEFT SECTION: Hamburger Button + Language Switcher -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         
         <!-- Hamburger Menu Button (Garis 3) -->
-        <button type="button" data-menu-toggle class="p-1.5 focus:outline-none group flex items-center space-x-2 text-stone-900 dark:text-stone-100 hover:text-brass transition-colors" aria-label="Buka Menu Navigasi Layar Penuh">
-          <div class="w-5 sm:w-6 h-4 flex flex-col justify-between">
-            <span class="hamburger-line hamburger-line-1 w-full h-[2px] bg-stone-900 dark:bg-stone-100 group-hover:bg-brass rounded-full"></span>
-            <span class="hamburger-line hamburger-line-2 w-3/4 h-[2px] bg-stone-900 dark:bg-stone-100 group-hover:bg-brass rounded-full transition-all group-hover:w-full"></span>
-            <span class="hamburger-line hamburger-line-3 w-full h-[2px] bg-stone-900 dark:bg-stone-100 group-hover:bg-brass rounded-full"></span>
+        <button type="button" data-menu-toggle class="p-1.5 focus:outline-none group flex items-center gap-1.5 text-stone-900 dark:text-stone-100 hover:text-brass transition-colors" aria-label="Buka Menu">
+          <div class="w-5 h-[14px] flex flex-col justify-between">
+            <span class="hamburger-line hamburger-line-1 block w-full h-[2px] bg-current rounded-full"></span>
+            <span class="hamburger-line hamburger-line-2 block w-3/4 h-[2px] bg-current rounded-full transition-all group-hover:w-full"></span>
+            <span class="hamburger-line hamburger-line-3 block w-full h-[2px] bg-current rounded-full"></span>
           </div>
-          <span class="text-[11px] uppercase tracking-[0.2em] font-semibold hidden md:inline-block">Menu</span>
+          <span class="text-[10px] uppercase tracking-[0.2em] font-semibold hidden md:inline-block">Menu</span>
         </button>
 
         <!-- Divider Line -->
-        <span class="h-3.5 w-[1px] bg-stone-300 dark:bg-stone-700 hidden sm:inline-block"></span>
+        <span class="h-3 w-px bg-stone-400/40 dark:bg-stone-600/40 hidden sm:block"></span>
 
         <!-- Language Switcher EN / ID -->
-        <div class="flex items-center space-x-1 text-[10px] sm:text-xs uppercase tracking-wider font-semibold" aria-label="Ganti Bahasa">
-          <button type="button" data-lang-btn="id" class="px-1 py-0.5 text-brass font-bold border-b border-brass transition-colors focus:outline-none" title="Bahasa Indonesia">ID</button>
-          <span class="text-stone-400 opacity-60">/</span>
+        <div class="flex items-center gap-0.5 text-[10px] uppercase tracking-wider font-semibold" aria-label="Ganti Bahasa">
+          <button type="button" data-lang-btn="id" class="px-1 py-0.5 text-brass font-bold border-b border-brass focus:outline-none" title="Bahasa Indonesia">ID</button>
+          <span class="text-stone-400 opacity-50">/</span>
           <button type="button" data-lang-btn="en" class="px-1 py-0.5 text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors focus:outline-none" title="English">EN</button>
         </div>
 
       </div>
 
       <!-- CENTER SECTION: Brand Logo -->
-      <a href="index.html" class="group flex flex-col items-center text-center px-2 shrink focus:outline-none" aria-label="Beranda Villa Joglo">
-        <span class="font-serif text-lg sm:text-2xl md:text-3xl tracking-[0.16em] sm:tracking-[0.22em] font-semibold uppercase text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors truncate max-w-[170px] sm:max-w-none">
+      <a href="index.html" class="group flex flex-col items-center text-center min-w-0 focus:outline-none" aria-label="Beranda Villa Joglo">
+        <span class="font-serif text-base sm:text-xl md:text-3xl tracking-[0.12em] sm:tracking-[0.18em] font-semibold uppercase text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors whitespace-nowrap">
           Villa Joglo
         </span>
-        <span class="font-sans text-[7px] sm:text-[9px] tracking-[0.3em] uppercase text-stone-500 dark:text-stone-400 hidden xs:block -mt-0.5">
+        <span class="font-sans text-[7px] sm:text-[8px] tracking-[0.25em] uppercase text-stone-500 dark:text-stone-400 hidden sm:block -mt-0.5">
           Heritage Sanctuary
         </span>
       </a>
 
-      <!-- RIGHT SECTION: Theme Toggle & Direct Butler CTA -->
-      <div class="flex items-center space-x-2 sm:space-x-4 shrink-0">
+      <!-- RIGHT SECTION: Theme Toggle & Butler CTA -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         
         <!-- Dark / Light Mode Toggle Button -->
-        <button type="button" data-theme-toggle class="p-2 rounded-full border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-700 dark:text-stone-300 hover:text-brass transition-colors focus:outline-none" aria-label="Ganti Mode Tema">
-          <i class="fa-solid fa-moon theme-icon-moon text-xs"></i>
-          <i class="fa-solid fa-sun theme-icon-sun text-xs hidden text-amber-400"></i>
+        <button type="button" data-theme-toggle class="p-1.5 sm:p-2 rounded-full border border-stone-300/70 dark:border-stone-700/70 hover:border-brass text-stone-700 dark:text-stone-300 hover:text-brass transition-colors focus:outline-none" aria-label="Ganti Mode Tema">
+          <i class="fa-solid fa-moon theme-icon-moon text-[11px]"></i>
+          <i class="fa-solid fa-sun theme-icon-sun text-[11px] hidden text-amber-400"></i>
         </button>
 
-        <!-- Direct WhatsApp Concierge CTA -->
-        <a href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20konsultasi%20pilihan%20kamar." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center px-3.5 sm:px-5 py-2 text-[10px] sm:text-xs uppercase tracking-[0.18em] font-semibold text-white bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 dark:hover:bg-brass-hover transition-colors rounded-sm shadow-sm">
-          <span class="lang-id">Tanya Butler</span>
-          <span class="lang-en">Ask Butler</span>
-          <i class="fa-brands fa-whatsapp ml-1.5 text-xs text-emerald-400 dark:text-emerald-950"></i>
+        <!-- WhatsApp Butler CTA -->
+        <a href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20konsultasi%20pilihan%20kamar." target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 px-2.5 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.18em] font-semibold text-white bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 dark:hover:bg-brass-hover transition-colors rounded-sm shadow-sm whitespace-nowrap">
+          <i class="fa-brands fa-whatsapp text-[11px] text-emerald-300 dark:text-emerald-900"></i>
+          <span class="hidden sm:inline">
+            <span class="lang-id">Tanya Butler</span>
+            <span class="lang-en">Ask Butler</span>
+          </span>
+          <span class="sm:hidden">
+            <span class="lang-id">Butler</span>
+            <span class="lang-en">Butler</span>
+          </span>
         </a>
 
       </div>

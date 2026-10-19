@@ -151,58 +151,64 @@
        - Right Theme Toggle & Book Button
        - Zero horizontal overflow on 320px to 4K
        ========================================== -->
-  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-4 md:py-6 px-4 sm:px-6 md:px-12 w-full max-w-full">
-    <div class="max-w-7xl mx-auto flex items-center justify-between w-full">
+  <header id="siteHeader" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 py-3 sm:py-4 md:py-6 px-3 sm:px-6 md:px-12 w-full">
+    <div class="flex items-center justify-between w-full gap-2">
       
-      <!-- LEFT SECTION: Hamburger Button (Garis 3) + Language Switcher -->
-      <div class="flex items-center space-x-2.5 sm:space-x-4 shrink-0">
+      <!-- LEFT SECTION: Hamburger Button + Language Switcher -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         
         <!-- Hamburger Menu Button (Garis 3) -->
-        <button type="button" data-menu-toggle class="p-1.5 focus:outline-none group flex items-center space-x-2 text-stone-900 dark:text-stone-100 hover:text-brass transition-colors" aria-label="Buka Menu Navigasi Layar Penuh">
-          <div class="w-5 sm:w-6 h-4 flex flex-col justify-between">
-            <span class="hamburger-line hamburger-line-1 w-full h-[2px] bg-stone-900 dark:bg-stone-100 group-hover:bg-brass rounded-full"></span>
-            <span class="hamburger-line hamburger-line-2 w-3/4 h-[2px] bg-stone-900 dark:bg-stone-100 group-hover:bg-brass rounded-full transition-all group-hover:w-full"></span>
-            <span class="hamburger-line hamburger-line-3 w-full h-[2px] bg-stone-900 dark:bg-stone-100 group-hover:bg-brass rounded-full"></span>
+        <button type="button" data-menu-toggle class="p-1.5 focus:outline-none group flex items-center gap-1.5 text-stone-900 dark:text-stone-100 hover:text-brass transition-colors" aria-label="Buka Menu">
+          <div class="w-5 h-[14px] flex flex-col justify-between">
+            <span class="hamburger-line hamburger-line-1 block w-full h-[2px] bg-current rounded-full"></span>
+            <span class="hamburger-line hamburger-line-2 block w-3/4 h-[2px] bg-current rounded-full transition-all group-hover:w-full"></span>
+            <span class="hamburger-line hamburger-line-3 block w-full h-[2px] bg-current rounded-full"></span>
           </div>
-          <span class="text-[11px] uppercase tracking-[0.2em] font-semibold hidden md:inline-block">Menu</span>
+          <span class="text-[10px] uppercase tracking-[0.2em] font-semibold hidden md:inline-block">Menu</span>
         </button>
 
         <!-- Divider Line -->
-        <span class="h-3.5 w-[1px] bg-stone-300 dark:bg-stone-700 hidden sm:inline-block"></span>
+        <span class="h-3 w-px bg-stone-400/40 dark:bg-stone-600/40 hidden sm:block"></span>
 
         <!-- Language Switcher EN / ID -->
-        <div class="flex items-center space-x-1 text-[10px] sm:text-xs uppercase tracking-wider font-semibold" aria-label="Ganti Bahasa">
-          <button type="button" data-lang-btn="id" class="px-1 py-0.5 text-brass font-bold border-b border-brass transition-colors focus:outline-none" title="Bahasa Indonesia">ID</button>
-          <span class="text-stone-400 opacity-60">/</span>
+        <div class="flex items-center gap-0.5 text-[10px] uppercase tracking-wider font-semibold" aria-label="Ganti Bahasa">
+          <button type="button" data-lang-btn="id" class="px-1 py-0.5 text-brass font-bold border-b border-brass focus:outline-none" title="Bahasa Indonesia">ID</button>
+          <span class="text-stone-400 opacity-50">/</span>
           <button type="button" data-lang-btn="en" class="px-1 py-0.5 text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors focus:outline-none" title="English">EN</button>
         </div>
 
       </div>
 
-      <!-- CENTER SECTION: Brand Logo -->
-      <a href="index.html" class="group flex flex-col items-center text-center px-2 shrink focus:outline-none" aria-label="Beranda Villa Joglo">
-        <span class="font-serif text-lg sm:text-2xl md:text-3xl tracking-[0.16em] sm:tracking-[0.22em] font-semibold uppercase text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors truncate max-w-[170px] sm:max-w-none">
+      <!-- CENTER SECTION: Brand Logo (min-w-0 allows it to shrink gracefully) -->
+      <a href="index.html" class="group flex flex-col items-center text-center min-w-0 focus:outline-none" aria-label="Beranda Villa Joglo">
+        <span class="font-serif text-base sm:text-xl md:text-3xl tracking-[0.12em] sm:tracking-[0.18em] font-semibold uppercase text-stone-900 dark:text-stone-100 group-hover:text-brass transition-colors whitespace-nowrap">
           Villa Joglo
         </span>
-        <span class="font-sans text-[7px] sm:text-[9px] tracking-[0.3em] uppercase text-stone-500 dark:text-stone-400 hidden xs:block -mt-0.5">
+        <span class="font-sans text-[7px] sm:text-[8px] tracking-[0.25em] uppercase text-stone-500 dark:text-stone-400 hidden sm:block -mt-0.5">
           Heritage Sanctuary
         </span>
       </a>
 
-      <!-- RIGHT SECTION: Theme Toggle & Direct Reservation CTA -->
-      <div class="flex items-center space-x-2 sm:space-x-4 shrink-0">
+      <!-- RIGHT SECTION: Theme Toggle & Booking CTA -->
+      <div class="flex items-center gap-2 sm:gap-3 shrink-0">
         
         <!-- Dark / Light Mode Toggle Button -->
-        <button type="button" data-theme-toggle class="p-2 rounded-full border border-stone-300 dark:border-stone-700 hover:border-brass text-stone-700 dark:text-stone-300 hover:text-brass transition-colors focus:outline-none" aria-label="Ganti Mode Tema">
-          <i class="fa-solid fa-moon theme-icon-moon text-xs"></i>
-          <i class="fa-solid fa-sun theme-icon-sun text-xs hidden text-amber-400"></i>
+        <button type="button" data-theme-toggle class="p-1.5 sm:p-2 rounded-full border border-stone-300/70 dark:border-stone-700/70 hover:border-brass text-stone-700 dark:text-stone-300 hover:text-brass transition-colors focus:outline-none" aria-label="Ganti Mode Tema">
+          <i class="fa-solid fa-moon theme-icon-moon text-[11px]"></i>
+          <i class="fa-solid fa-sun theme-icon-sun text-[11px] hidden text-amber-400"></i>
         </button>
 
-        <!-- Direct CTA Button -->
-        <a href="stay.html" class="inline-flex items-center px-3.5 sm:px-5 py-2 text-[10px] sm:text-xs uppercase tracking-[0.18em] font-semibold text-white bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 dark:hover:bg-brass-hover transition-colors rounded-sm shadow-sm">
-          <span class="lang-id">Reservasi</span>
-          <span class="lang-en">Book</span>
-          <i class="fa-solid fa-arrow-right ml-1.5 text-[9px] hidden sm:inline-block"></i>
+        <!-- CTA Button — icon-only on very small, text on sm+ -->
+        <a href="stay.html" class="flex items-center gap-1.5 px-2.5 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.18em] font-semibold text-white bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 dark:hover:bg-brass-hover transition-colors rounded-sm shadow-sm whitespace-nowrap">
+          <i class="fa-solid fa-calendar-check text-[10px] sm:hidden"></i>
+          <span class="hidden sm:inline">
+            <span class="lang-id">Reservasi</span>
+            <span class="lang-en">Book</span>
+          </span>
+          <span class="sm:hidden">
+            <span class="lang-id">Pesan</span>
+            <span class="lang-en">Book</span>
+          </span>
         </a>
 
       </div>
@@ -373,71 +379,74 @@
   <main class="w-full max-w-full">
 
     <!-- HERO SECTION: Atmospheric Storytelling Hook -->
-    <section class="relative min-h-[92vh] sm:min-h-screen flex items-center justify-center overflow-hidden pt-24 sm:pt-28 pb-16 px-4 sm:px-6 w-full max-w-full">
+    <section class="relative min-h-svh sm:min-h-screen flex items-center justify-center overflow-hidden pt-20 sm:pt-28 pb-12 sm:pb-16 w-full">
       
       <!-- Background Image -->
-      <div class="absolute inset-0 z-0 overflow-hidden w-full h-full">
+      <div class="absolute inset-0 z-0 w-full h-full">
         <img 
           src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=2000&q=85" 
           alt="Pemandangan kolam renang alami dan arsitektur kayu jati tropis Villa Joglo" 
-          class="w-full h-full object-cover object-center scale-105 transition-transform duration-[10000ms] ease-out hover:scale-100"
+          class="w-full h-full object-cover object-center"
+          loading="eager"
         />
         <div class="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-stone-950/45 to-stone-950/70 dark:from-[#120E0C] dark:via-stone-950/60 dark:to-stone-950/80"></div>
         <div class="absolute inset-0 bg-black/20"></div>
       </div>
 
       <!-- Hero Copywriting & Actions -->
-      <div class="relative z-10 max-w-4xl mx-auto text-center text-white space-y-6 sm:space-y-8 mt-6 sm:mt-12 w-full px-2" data-aos="fade-up" data-aos-duration="1100">
-        
-        <!-- Overhead Label -->
-        <div class="inline-flex items-center space-x-2.5 bg-stone-900/50 backdrop-blur-md border border-white/20 px-3.5 py-1.5 rounded-full text-[10px] sm:text-xs uppercase tracking-[0.25em] text-stone-200">
-          <span class="w-1.5 h-1.5 rounded-full bg-brass pulse-subtle"></span>
-          <span>A Sanctuary For The Senses</span>
+      <div class="relative z-10 w-full px-4 sm:px-8 md:px-12 text-center text-white" data-aos="fade-up" data-aos-duration="1100">
+        <div class="max-w-3xl mx-auto space-y-5 sm:space-y-8">
+          
+          <!-- Overhead Label -->
+          <div class="inline-flex items-center space-x-2 bg-stone-900/50 backdrop-blur-md border border-white/20 px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.2em] text-stone-200">
+            <span class="w-1.5 h-1.5 rounded-full bg-brass pulse-subtle shrink-0"></span>
+            <span>A Sanctuary For The Senses</span>
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="font-serif text-[2rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-normal tracking-tight break-words">
+            <span class="lang-id">
+              Menemukan Kedamaian <br />
+              <span class="italic font-light text-stone-200">di Balik Kayu Jati Kuno</span>
+            </span>
+            <span class="lang-en">
+              Rediscover Serenity <br />
+              <span class="italic font-light text-stone-200">Amidst Century-Old Teak</span>
+            </span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-stone-200/90 font-light text-sm sm:text-lg md:text-xl leading-relaxed max-w-xl mx-auto">
+            <span class="lang-id">
+              Bukan sekadar tempat menginap, melainkan perjalanan pulang ke pelukan alam. Rasakan sakralnya arsitektur Joglo berkayu jati ratusan tahun, embun pagi perbukitan, dan ketenangan tanpa batas.
+            </span>
+            <span class="lang-en">
+              More than just a stay—a journey back to nature's embrace. Experience the sacred spirit of century-old teakwood Joglo architecture, mist-kissed hills, and unbounded tranquility.
+            </span>
+          </p>
+
+          <!-- CTA Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full">
+            <a href="stay.html" class="w-full sm:w-auto px-6 py-3.5 sm:py-4 bg-brass hover:bg-brass-hover text-stone-950 font-semibold text-xs uppercase tracking-[0.2em] transition-all duration-300 shadow-lg rounded-sm text-center">
+              <span class="lang-id">Eksplorasi Unit & Kamar</span>
+              <span class="lang-en">Explore Villas & Suites</span>
+            </a>
+            <a href="#filosofi" class="w-full sm:w-auto px-6 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium text-xs uppercase tracking-[0.2em] backdrop-blur-sm transition-all duration-300 rounded-sm text-center">
+              <span class="lang-id">Filosofi & Ruang Kami</span>
+              <span class="lang-en">Our Heritage Philosophy</span>
+            </a>
+          </div>
+
+          <!-- Scroll Indicator -->
+          <div class="pt-4 sm:pt-8 flex flex-col items-center justify-center text-stone-300">
+            <span class="text-[9px] uppercase tracking-[0.3em] mb-2 opacity-70">
+              <span class="lang-id">Gulir ke Bawah</span>
+              <span class="lang-en">Scroll Down</span>
+            </span>
+            <div class="w-px h-8 bg-gradient-to-b from-brass to-transparent animate-pulse"></div>
+          </div>
+
         </div>
-
-        <!-- Main Headline (Bilingual & Responsive) -->
-        <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.12] tracking-tight max-w-full break-words">
-          <span class="lang-id">
-            Menemukan Kedamaian <br />
-            <span class="italic font-light text-stone-200">di Balik Kayu Jati Kuno</span>
-          </span>
-          <span class="lang-en">
-            Rediscover Serenity <br />
-            <span class="italic font-light text-stone-200">Amidst Century-Old Teak</span>
-          </span>
-        </h1>
-
-        <!-- Subheadline Storytelling (Bilingual) -->
-        <p class="max-w-2xl mx-auto text-stone-200 font-light text-sm sm:text-lg md:text-xl leading-relaxed tracking-wide px-2">
-          <span class="lang-id">
-            Bukan sekadar tempat menginap, melainkan perjalanan pulang ke pelukan alam. Rasakan sakralnya arsitektur Joglo berkayu jati ratusan tahun, embun pagi perbukitan, dan ketenangan tanpa batas.
-          </span>
-          <span class="lang-en">
-            More than just a stay—a journey back to nature's embrace. Experience the sacred spirit of century-old teakwood Joglo architecture, mist-kissed hills, and unbounded tranquility.
-          </span>
-        </p>
-
-        <!-- CTA Action Buttons -->
-        <div class="pt-2 sm:pt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 w-full max-w-xs sm:max-w-none mx-auto">
-          <a href="stay.html" class="w-full sm:w-auto px-7 py-3.5 sm:py-4 bg-brass hover:bg-brass-hover text-stone-950 font-semibold text-xs uppercase tracking-[0.22em] transition-all duration-300 shadow-lg hover:shadow-brass/30 transform hover:-translate-y-0.5 rounded-sm text-center">
-            <span class="lang-id">Eksplorasi Unit & Kamar</span>
-            <span class="lang-en">Explore Villas & Suites</span>
-          </a>
-          <a href="#filosofi" class="w-full sm:w-auto px-7 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-medium text-xs uppercase tracking-[0.22em] backdrop-blur-sm transition-all duration-300 rounded-sm text-center">
-            <span class="lang-id">Filosofi & Ruang Kami</span>
-            <span class="lang-en">Our Heritage Philosophy</span>
-          </a>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="pt-8 sm:pt-12 flex flex-col items-center justify-center text-stone-300">
-          <span class="text-[9px] uppercase tracking-[0.3em] mb-2 opacity-80">
-            <span class="lang-id">Gulir ke Bawah</span>
-            <span class="lang-en">Scroll Down</span>
-          </span>
-          <div class="w-[1px] h-8 sm:h-10 bg-gradient-to-b from-brass to-transparent animate-pulse"></div>
-        </div>
-
       </div>
 
     </section>
