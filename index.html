@@ -189,28 +189,15 @@
         </span>
       </a>
 
-      <!-- RIGHT SECTION: Theme Toggle & Booking CTA -->
+      <!-- RIGHT SECTION: Booking CTA (Always 'Reservasi' on all devices) -->
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-        
-        <!-- Dark / Light Mode Toggle Button -->
-        <button type="button" data-theme-toggle class="p-1.5 sm:p-2 rounded-full border border-stone-300/70 dark:border-stone-700/70 hover:border-brass text-stone-700 dark:text-stone-300 hover:text-brass transition-colors focus:outline-none" aria-label="Ganti Mode Tema">
-          <i class="fa-solid fa-moon theme-icon-moon text-[11px]"></i>
-          <i class="fa-solid fa-sun theme-icon-sun text-[11px] hidden text-amber-400"></i>
-        </button>
-
-        <!-- CTA Button — icon-only on very small, text on sm+ -->
-        <a href="stay.html" class="flex items-center gap-1.5 px-2.5 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.18em] font-semibold text-white bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 dark:hover:bg-brass-hover transition-colors rounded-sm shadow-sm whitespace-nowrap">
-          <i class="fa-solid fa-calendar-check text-[10px] sm:hidden"></i>
-          <span class="hidden sm:inline">
+        <a href="stay.html" class="flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.18em] font-semibold text-white bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 dark:hover:bg-brass-hover transition-colors rounded-sm shadow-sm whitespace-nowrap">
+          <i class="fa-solid fa-calendar-check text-[10px]"></i>
+          <span>
             <span class="lang-id">Reservasi</span>
-            <span class="lang-en">Book</span>
-          </span>
-          <span class="sm:hidden">
-            <span class="lang-id">Pesan</span>
-            <span class="lang-en">Book</span>
+            <span class="lang-en">Reservations</span>
           </span>
         </a>
-
       </div>
 
     </div>
@@ -218,7 +205,8 @@
 
   <!-- ==========================================
        FULLSCREEN OVERLAY NAVIGATION (RICH HERITAGE LAYOUT)
-       - Highlight active menu item currently viewed
+       - Highlight active menu item currently viewed (including hash sections)
+       - Dark/Light mode toggle preserved here inside menu
        - Multilingual support ID / EN
        - Complete Concierge & Location Information
        ========================================== -->
@@ -239,7 +227,8 @@
           <button type="button" data-lang-btn="en" class="px-1 text-stone-400 hover:text-brass">EN</button>
         </div>
 
-        <button type="button" data-theme-toggle class="p-1.5 rounded-full border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300" aria-label="Toggle Theme">
+        <!-- Theme Toggle preserved inside Menu -->
+        <button type="button" data-theme-toggle class="p-1.5 rounded-full border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:text-brass transition-colors" aria-label="Toggle Theme">
           <i class="fa-solid fa-moon theme-icon-moon text-xs"></i>
           <i class="fa-solid fa-sun theme-icon-sun text-xs hidden text-amber-400"></i>
         </button>
@@ -250,21 +239,21 @@
       </div>
     </div>
 
-    <!-- Center Navigation Links with Active Page Highlighting -->
+    <!-- Center Navigation Links with Active Page & Section Highlighting -->
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 my-auto py-8">
       
       <!-- Left Column: Primary Staggered Links -->
       <div class="lg:col-span-7 space-y-4 md:space-y-6">
         
-        <!-- Nav 01: Beranda (Active on index.html) -->
+        <!-- Nav 01: Beranda -->
         <div class="nav-stagger-item">
-          <a href="index.html" data-nav-item="index.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-brass font-semibold">01</span>
-            <span class="nav-text-label font-semibold group-hover:translate-x-2 transition-transform duration-300">
+          <a href="index.html" data-nav-item="index.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">01</span>
+            <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Beranda</span>
               <span class="lang-en">Home</span>
             </span>
-            <span class="nav-active-badge text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
+            <span class="nav-active-badge hidden text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
               <span class="lang-id">Sedang Dilihat</span>
               <span class="lang-en">Active</span>
             </span>
@@ -274,7 +263,7 @@
         <!-- Nav 02: Pilihan Unit -->
         <div class="nav-stagger-item">
           <a href="stay.html" data-nav-item="stay.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">02</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">02</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Pilihan Unit & Kamar</span>
               <span class="lang-en">Villas & Suites</span>
@@ -289,7 +278,7 @@
         <!-- Nav 03: Joglo Ageng Detail -->
         <div class="nav-stagger-item">
           <a href="detail-unit.html" data-nav-item="detail-unit.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">03</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">03</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Joglo Ageng (Detail)</span>
               <span class="lang-en">Joglo Ageng (Suite)</span>
@@ -301,24 +290,32 @@
           </a>
         </div>
 
-        <!-- Nav 04: Filosofi -->
+        <!-- Nav 04: Filosofi Kayu Jati -->
         <div class="nav-stagger-item">
           <a href="index.html#filosofi" data-nav-item="filosofi" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">04</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">04</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Filosofi Kayu Jati</span>
               <span class="lang-en">Teak Philosophy</span>
             </span>
+            <span class="nav-active-badge hidden text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
+              <span class="lang-id">Sedang Dilihat</span>
+              <span class="lang-en">Active</span>
+            </span>
           </a>
         </div>
 
-        <!-- Nav 05: Pengalaman -->
+        <!-- Nav 05: Pengalaman Menginap -->
         <div class="nav-stagger-item">
           <a href="index.html#pengalaman" data-nav-item="pengalaman" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">05</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">05</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Pengalaman Menginap</span>
               <span class="lang-en">Experiences</span>
+            </span>
+            <span class="nav-active-badge hidden text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
+              <span class="lang-id">Sedang Dilihat</span>
+              <span class="lang-en">Active</span>
             </span>
           </a>
         </div>
@@ -684,10 +681,23 @@
                   <span class="lang-en">View Details</span>
                   <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
                 </a>
-                <a href="detail-unit.html#pesan" class="px-4 sm:px-5 py-2 text-xs uppercase tracking-wider bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-colors rounded-sm">
-                  <span class="lang-id">Pesan</span>
-                  <span class="lang-en">Book</span>
-                </a>
+                <div class="flex items-center gap-2">
+                  <a 
+                    href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Ageng%20(Unit%20J1).%20(https://villajoglo.com/stay.html)" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    data-wa-unit-name="Joglo Ageng" 
+                    data-wa-unit-code="Unit J1" 
+                    class="p-2 text-xs bg-emerald-700 hover:bg-emerald-800 text-white rounded-sm shadow-sm transition-all"
+                    title="Tanya Joglo Ageng via WhatsApp"
+                  >
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                  </a>
+                  <a href="detail-unit.html#pesan" class="px-4 sm:px-5 py-2 text-xs uppercase tracking-wider bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-colors rounded-sm">
+                    <span class="lang-id">Reservasi</span>
+                    <span class="lang-en">Reserve</span>
+                  </a>
+                </div>
               </div>
             </div>
           </article>
@@ -751,10 +761,23 @@
                   <span class="lang-en">View Details</span>
                   <i class="fa-solid fa-arrow-right ml-1.5 text-xs"></i>
                 </a>
-                <a href="stay.html" class="px-4 sm:px-5 py-2 text-xs uppercase tracking-wider bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-colors rounded-sm">
-                  <span class="lang-id">Pesan</span>
-                  <span class="lang-en">Book</span>
-                </a>
+                <div class="flex items-center gap-2">
+                  <a 
+                    href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Tirta%20(Unit%20J2).%20(https://villajoglo.com/stay.html)" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    data-wa-unit-name="Joglo Tirta" 
+                    data-wa-unit-code="Unit J2" 
+                    class="p-2 text-xs bg-emerald-700 hover:bg-emerald-800 text-white rounded-sm shadow-sm transition-all"
+                    title="Tanya Joglo Tirta via WhatsApp"
+                  >
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                  </a>
+                  <a href="stay.html" class="px-4 sm:px-5 py-2 text-xs uppercase tracking-wider bg-stone-900 hover:bg-wood text-white dark:bg-brass dark:text-stone-950 font-semibold transition-colors rounded-sm">
+                    <span class="lang-id">Reservasi</span>
+                    <span class="lang-en">Reserve</span>
+                  </a>
+                </div>
               </div>
             </div>
           </article>

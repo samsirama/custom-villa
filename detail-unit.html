@@ -205,28 +205,15 @@
         </span>
       </a>
 
-      <!-- RIGHT SECTION: Theme Toggle & Booking CTA -->
+      <!-- RIGHT SECTION: Booking CTA (Always 'Reservasi' on all devices) -->
       <div class="flex items-center gap-2 sm:gap-3 shrink-0">
-
-        <!-- Dark / Light Mode Toggle Button -->
-        <button type="button" data-theme-toggle class="p-1.5 sm:p-2 rounded-full border border-stone-300/70 dark:border-stone-700/70 hover:border-brass text-stone-700 dark:text-stone-300 hover:text-brass transition-colors focus:outline-none" aria-label="Ganti Mode Tema">
-          <i class="fa-solid fa-moon theme-icon-moon text-[11px]"></i>
-          <i class="fa-solid fa-sun theme-icon-sun text-[11px] hidden text-amber-400"></i>
-        </button>
-
-        <!-- CTA Button — abbreviated on mobile -->
-        <a href="#pesan" class="flex items-center gap-1.5 px-2.5 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.18em] font-semibold text-white bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 dark:hover:bg-brass-hover transition-colors rounded-sm shadow-sm whitespace-nowrap">
-          <i class="fa-solid fa-calendar-check text-[10px] sm:hidden"></i>
-          <span class="hidden sm:inline">
-            <span class="lang-id">Pesan Unit</span>
-            <span class="lang-en">Book Unit</span>
-          </span>
-          <span class="sm:hidden">
-            <span class="lang-id">Pesan</span>
-            <span class="lang-en">Book</span>
+        <a href="#pesan" class="flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 text-[10px] sm:text-[11px] uppercase tracking-[0.14em] sm:tracking-[0.18em] font-semibold text-white bg-wood hover:bg-wood-dark dark:bg-brass dark:text-stone-950 dark:hover:bg-brass-hover transition-colors rounded-sm shadow-sm whitespace-nowrap">
+          <i class="fa-solid fa-calendar-check text-[10px]"></i>
+          <span>
+            <span class="lang-id">Reservasi</span>
+            <span class="lang-en">Reservations</span>
           </span>
         </a>
-
       </div>
 
     </div>
@@ -252,7 +239,7 @@
           <button type="button" data-lang-btn="en" class="px-1 text-stone-400 hover:text-brass">EN</button>
         </div>
 
-        <button type="button" data-theme-toggle class="p-1.5 rounded-full border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300" aria-label="Toggle Theme">
+        <button type="button" data-theme-toggle class="p-1.5 rounded-full border border-stone-300 dark:border-stone-700 text-stone-700 dark:text-stone-300 hover:text-brass transition-colors" aria-label="Toggle Theme">
           <i class="fa-solid fa-moon theme-icon-moon text-xs"></i>
           <i class="fa-solid fa-sun theme-icon-sun text-xs hidden text-amber-400"></i>
         </button>
@@ -272,7 +259,7 @@
         <!-- Nav 01: Beranda -->
         <div class="nav-stagger-item">
           <a href="index.html" data-nav-item="index.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">01</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">01</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Beranda</span>
               <span class="lang-en">Home</span>
@@ -287,7 +274,7 @@
         <!-- Nav 02: Pilihan Unit -->
         <div class="nav-stagger-item">
           <a href="stay.html" data-nav-item="stay.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">02</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">02</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Pilihan Unit & Kamar</span>
               <span class="lang-en">Villas & Suites</span>
@@ -302,7 +289,7 @@
         <!-- Nav 03: Joglo Ageng Detail (Active on detail-unit.html) -->
         <div class="nav-stagger-item">
           <a href="detail-unit.html" data-nav-item="detail-unit.html" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-brass font-semibold">03</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-brass font-semibold">03</span>
             <span class="nav-text-label font-semibold group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Joglo Ageng (Detail)</span>
               <span class="lang-en">Joglo Ageng (Suite)</span>
@@ -314,24 +301,32 @@
           </a>
         </div>
 
-        <!-- Nav 04: Filosofi -->
+        <!-- Nav 04: Filosofi Kayu Jati -->
         <div class="nav-stagger-item">
           <a href="index.html#filosofi" data-nav-item="filosofi" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">04</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">04</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Filosofi Kayu Jati</span>
               <span class="lang-en">Teak Philosophy</span>
             </span>
+            <span class="nav-active-badge hidden text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
+              <span class="lang-id">Sedang Dilihat</span>
+              <span class="lang-en">Active</span>
+            </span>
           </a>
         </div>
 
-        <!-- Nav 05: Pengalaman -->
+        <!-- Nav 05: Pengalaman Menginap -->
         <div class="nav-stagger-item">
           <a href="index.html#pengalaman" data-nav-item="pengalaman" class="group flex items-center space-x-3 sm:space-x-4 font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900 dark:text-stone-100 hover:text-brass transition-colors">
-            <span class="font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">05</span>
+            <span class="nav-num font-sans text-[11px] sm:text-xs tracking-widest text-stone-400 group-hover:text-brass">05</span>
             <span class="nav-text-label font-normal group-hover:translate-x-2 transition-transform duration-300">
               <span class="lang-id">Pengalaman Menginap</span>
               <span class="lang-en">Experiences</span>
+            </span>
+            <span class="nav-active-badge hidden text-[9px] sm:text-[10px] uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brass text-brass bg-brass/10 font-sans">
+              <span class="lang-id">Sedang Dilihat</span>
+              <span class="lang-en">Active</span>
             </span>
           </a>
         </div>
@@ -924,58 +919,106 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         
         <!-- Other 1: Joglo Tirta -->
-        <article class="group bg-white dark:bg-[#1A1411] border border-stone-200 dark:border-stone-800 rounded-sm overflow-hidden shadow-sm hover:shadow-lg transition-all">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80" alt="Joglo Tirta Water Pavilion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute top-3 left-3 bg-forest/90 text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-sm">Plunge Pool</div>
-          </div>
-          <div class="p-6 space-y-3">
-            <div class="flex justify-between items-baseline">
-              <h4 class="font-serif text-xl text-stone-900 dark:text-stone-100">Joglo Tirta</h4>
-              <span class="text-xs text-wood dark:text-brass font-semibold">Rp 3.850.000</span>
+        <article class="group bg-white dark:bg-[#1A1411] border border-stone-200 dark:border-stone-800 rounded-sm overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=600&q=80" alt="Joglo Tirta Water Pavilion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute top-3 left-3 bg-forest/90 text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-sm">Plunge Pool</div>
             </div>
-            <p class="text-xs text-stone-500 line-clamp-2">Intimate water pavilion surrounded by tranquil lotus pools.</p>
-            <a href="stay.html" class="inline-flex items-center text-xs uppercase tracking-wider text-stone-900 dark:text-white font-medium hover:text-brass pt-2">
+            <div class="p-6 space-y-3">
+              <div class="flex justify-between items-baseline">
+                <h4 class="font-serif text-xl text-stone-900 dark:text-stone-100">Joglo Tirta</h4>
+                <span class="text-xs text-wood dark:text-brass font-semibold">Rp 3.850.000</span>
+              </div>
+              <p class="text-xs text-stone-500 line-clamp-2">Suaka air hening di atas kolam teratai dengan plunge pool privat dan teras ulin.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-stone-100 dark:border-stone-800/40 mt-3 pt-3">
+            <a href="stay.html" class="inline-flex items-center text-xs uppercase tracking-wider text-stone-900 dark:text-white font-medium hover:text-brass">
               <span>View Suite</span>
               <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+            </a>
+            <a 
+              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Tirta%20(Unit%20J2).%20(https://villajoglo.com/stay.html)" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              data-wa-unit-name="Joglo Tirta" 
+              data-wa-unit-code="Unit J2" 
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold bg-emerald-700 hover:bg-emerald-800 text-white rounded-sm"
+              title="Tanya Joglo Tirta via WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Tanya WA</span>
             </a>
           </div>
         </article>
 
         <!-- Other 2: Joglo Sekar -->
-        <article class="group bg-white dark:bg-[#1A1411] border border-stone-200 dark:border-stone-800 rounded-sm overflow-hidden shadow-sm hover:shadow-lg transition-all">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Joglo Sekar Garden Pavilion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute top-3 left-3 bg-wood/90 text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-sm">Botanical</div>
-          </div>
-          <div class="p-6 space-y-3">
-            <div class="flex justify-between items-baseline">
-              <h4 class="font-serif text-xl text-stone-900 dark:text-stone-100">Joglo Sekar</h4>
-              <span class="text-xs text-wood dark:text-brass font-semibold">Rp 2.950.000</span>
+        <article class="group bg-white dark:bg-[#1A1411] border border-stone-200 dark:border-stone-800 rounded-sm overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=600&q=80" alt="Joglo Sekar Garden Pavilion" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute top-3 left-3 bg-wood/90 text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-sm">Botanical</div>
             </div>
-            <p class="text-xs text-stone-500 line-clamp-2">Serene botanical garden sanctuary with open rain shower.</p>
-            <a href="stay.html" class="inline-flex items-center text-xs uppercase tracking-wider text-stone-900 dark:text-white font-medium hover:text-brass pt-2">
+            <div class="p-6 space-y-3">
+              <div class="flex justify-between items-baseline">
+                <h4 class="font-serif text-xl text-stone-900 dark:text-stone-100">Joglo Sekar</h4>
+                <span class="text-xs text-wood dark:text-brass font-semibold">Rp 2.950.000</span>
+              </div>
+              <p class="text-xs text-stone-500 line-clamp-2">Paviliun taman botani tersembunyi berpagar kamboja kuno dengan rain shower terbuka.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-stone-100 dark:border-stone-800/40 mt-3 pt-3">
+            <a href="stay.html" class="inline-flex items-center text-xs uppercase tracking-wider text-stone-900 dark:text-white font-medium hover:text-brass">
               <span>View Suite</span>
               <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+            </a>
+            <a 
+              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Sekar%20(Unit%20J3).%20(https://villajoglo.com/stay.html)" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              data-wa-unit-name="Joglo Sekar" 
+              data-wa-unit-code="Unit J3" 
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold bg-emerald-700 hover:bg-emerald-800 text-white rounded-sm"
+              title="Tanya Joglo Sekar via WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Tanya WA</span>
             </a>
           </div>
         </article>
 
         <!-- Other 3: Joglo Lawas -->
-        <article class="group bg-white dark:bg-[#1A1411] border border-stone-200 dark:border-stone-800 rounded-sm overflow-hidden shadow-sm hover:shadow-lg transition-all">
-          <div class="relative h-56 overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Joglo Lawas Family Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-            <div class="absolute top-3 left-3 bg-stone-900/90 text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-sm">Family 2-Bedroom</div>
-          </div>
-          <div class="p-6 space-y-3">
-            <div class="flex justify-between items-baseline">
-              <h4 class="font-serif text-xl text-stone-900 dark:text-stone-100">Joglo Lawas</h4>
-              <span class="text-xs text-wood dark:text-brass font-semibold">Rp 5.200.000</span>
+        <article class="group bg-white dark:bg-[#1A1411] border border-stone-200 dark:border-stone-800 rounded-sm overflow-hidden shadow-sm hover:shadow-lg transition-all flex flex-col justify-between">
+          <div>
+            <div class="relative h-56 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Joglo Lawas Family Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div class="absolute top-3 left-3 bg-stone-900/90 text-white text-[10px] uppercase tracking-wider px-2.5 py-1 rounded-sm">Family 2-Bedroom</div>
             </div>
-            <p class="text-xs text-stone-500 line-clamp-2">Stately two-bedroom sanctuary for family escapes and gatherings.</p>
-            <a href="stay.html" class="inline-flex items-center text-xs uppercase tracking-wider text-stone-900 dark:text-white font-medium hover:text-brass pt-2">
+            <div class="p-6 space-y-3">
+              <div class="flex justify-between items-baseline">
+                <h4 class="font-serif text-xl text-stone-900 dark:text-stone-100">Joglo Lawas</h4>
+                <span class="text-xs text-wood dark:text-brass font-semibold">Rp 5.200.000</span>
+              </div>
+              <p class="text-xs text-stone-500 line-clamp-2">Sanctuary megah 2 kamar tidur untuk keluarga tercinta dengan pendopo kayu ukir antik.</p>
+            </div>
+          </div>
+          <div class="p-6 pt-0 flex items-center justify-between border-t border-stone-100 dark:border-stone-800/40 mt-3 pt-3">
+            <a href="stay.html" class="inline-flex items-center text-xs uppercase tracking-wider text-stone-900 dark:text-white font-medium hover:text-brass">
               <span>View Suite</span>
               <i class="fa-solid fa-arrow-right ml-1.5 text-[10px]"></i>
+            </a>
+            <a 
+              href="https://wa.me/6281234567890?text=Halo%20Villa%20Joglo,%20saya%20ingin%20bertanya%20lebih%20lanjut%20tentang%20Joglo%20Lawas%20(Unit%20J4).%20(https://villajoglo.com/stay.html)" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              data-wa-unit-name="Joglo Lawas" 
+              data-wa-unit-code="Unit J4" 
+              class="inline-flex items-center gap-1.5 px-3 py-1.5 text-[11px] font-semibold bg-emerald-700 hover:bg-emerald-800 text-white rounded-sm"
+              title="Tanya Joglo Lawas via WhatsApp"
+            >
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Tanya WA</span>
             </a>
           </div>
         </article>

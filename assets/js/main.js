@@ -115,62 +115,147 @@
   applyTheme(getPreferredTheme());
 
   // ==========================================
-  // 3. WHATSAPP DYNAMIC CONCIERGE GENERATOR
+  // 3. WHATSAPP CONTEXTUAL CONCIERGE GENERATOR
   // ==========================================
   function updateWhatsAppLink() {
-    const waBookingBtn = document.getElementById('waBookingBtn');
-    if (!waBookingBtn) return;
-
-    const unitTitleEl = document.getElementById('unitDetailTitle');
-    const checkinInput = document.getElementById('bookCheckin');
-    const checkoutInput = document.getElementById('bookCheckout');
-    const guestsSelect = document.getElementById('bookGuests');
     const currentLang = document.documentElement.getAttribute('lang') || 'id';
-
-    const unitName = unitTitleEl ? unitTitleEl.textContent.trim() : 'Joglo Ageng';
-    const checkinVal = checkinInput && checkinInput.value ? checkinInput.value : 'TBD';
-    const checkoutVal = checkoutInput && checkoutInput.value ? checkoutInput.value : 'TBD';
-    const guestsVal = guestsSelect ? guestsSelect.value : '2 Guests';
     const waPhone = '6281234567890';
 
-    let message = '';
-    if (currentLang === 'en') {
-      message = `Hello Villa Joglo Concierge, I would like to inquiry & book:\n\n• Unit: *${unitName}*\n• Check-in: *${checkinVal}*\n• Check-out: *${checkoutVal}*\n• Guests: *${guestsVal}*\n\nPlease confirm availability and rate. Thank you.`;
-    } else {
-      message = `Halo Concierge Villa Joglo, saya ingin menanyakan ketersediaan & reservasi:\n\n• Unit: *${unitName}*\n• Check-in: *${checkinVal}*\n• Check-out: *${checkoutVal}*\n• Jumlah Tamu: *${guestsVal}*\n\nMohon konfirmasi ketersediaan dan penawaran spesialnya. Terima kasih.`;
-    }
+    // 1. Update all unit cards with data-wa-unit-name attribute (in stay.html, index.html, detail-unit.html)
+    const unitWaButtons = document.querySelectorAll('[data-wa-unit-name]');
+    unitWaButtons.forEach((btn) => {
+      const unitName = btn.getAttribute('data-wa-unit-name');
+      const unitCode = btn.getAttribute('data-wa-unit-code');
+      const unitLabel = unitCode ? `${unitName} (${unitCode})` : unitName;
+      const refUrl = window.location.href.split('#')[0] || 'https://villajoglo.com/stay.html';
 
-    waBookingBtn.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(message)}`;
+      let msg = '';
+      if (currentLang === 'en') {
+        msg = `Hello Villa Joglo, I would like to inquire further about ${unitLabel}. (${refUrl})`;
+      } else {
+        msg = `Halo Villa Joglo, saya ingin bertanya lebih lanjut tentang ${unitLabel}. (${refUrl})`;
+      }
+
+      btn.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
+    });
+
+    // 2. Update Detail Unit Booking Form (on detail-unit.html)
+    const waBookingBtn = document.getElementById('waBookingBtn');
+    if (waBookingBtn) {
+      const unitTitleEl = document.getElementById('unitDetailTitle');
+      const checkinInput = document.getElementById('bookCheckin');
+      const checkoutInput = document.getElementById('bookCheckout');
+      const guestsSelect = document.getElementById('bookGuests');
+
+      const unitName = unitTitleEl ? unitTitleEl.textContent.trim() : 'Joglo Ageng';
+      const checkinVal = checkinInput && checkinInput.value ? checkinInput.value : '';
+      const checkoutVal = checkoutInput && checkoutInput.value ? checkoutInput.value : '';
+      const guestsVal = guestsSelect ? guestsSelect.value : '2 Tamu Dewasa';
+      const refUrl = window.location.href.split('#')[0] || 'https://villajoglo.com/detail-unit.html';
+
+      let msg = '';
+      if (currentLang === 'en') {
+        msg = `Hello Villa Joglo, I would like to inquire further about ${unitName} (Unit J1). (${refUrl})\n\n• Check-in: ${checkinVal || 'TBD'}\n• Check-out: ${checkoutVal || 'TBD'}\n• Guests: ${guestsVal}`;
+      } else {
+        msg = `Halo Villa Joglo, saya ingin bertanya lebih lanjut tentang ${unitName} (Unit J1). (${refUrl})\n\n• Check-in: ${checkinVal || 'TBD'}\n• Check-out: ${checkoutVal || 'TBD'}\n• Jumlah Tamu: ${guestsVal}`;
+      }
+
+      waBookingBtn.href = `https://wa.me/${waPhone}?text=${encodeURIComponent(msg)}`;
+    }
   }
 
   // ==========================================
-  // 4. ACTIVE MENU AUTO-HIGHLIGHT
+  // 4. ACTIVE MENU AUTO-HIGHLIGHT & SCROLL SPY
   // ==========================================
-  function highlightActiveMenu() {
+  let currentActiveTarget = '';
+
+  function getActiveSectionFromScroll() {
+    const filosofiSection = document.getElementById('filosofi');
+    const pengalamanSection = document.getElementById('pengalaman');
+
+    if (!filosofiSection && !pengalamanSection) return '';
+
+    const scrollY = window.scrollY || window.pageYOffset;
+    if (scrollY < 300) {
+      return 'index.html';
+    }
+
+    const viewportMiddle = scrollY + (window.innerHeight / 2.5);
+
+    if (pengalamanSection) {
+      const top = pengalamanSection.offsetTop;
+      const bottom = top + pengalamanSection.offsetHeight;
+      if (viewportMiddle >= top && viewportMiddle < bottom) {
+        return 'pengalaman';
+      }
+    }
+
+    if (filosofiSection) {
+      const top = filosofiSection.offsetTop;
+      const bottom = top + filosofiSection.offsetHeight;
+      if (viewportMiddle >= top && viewportMiddle < bottom) {
+        return 'filosofi';
+      }
+    }
+
+    return 'index.html';
+  }
+
+  function highlightActiveMenu(explicitTarget) {
     const currentPath = window.location.pathname.toLowerCase();
     let currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1);
     if (!currentFile || currentFile === '') {
       currentFile = 'index.html';
     }
 
+    let activeTarget = explicitTarget;
+    if (!activeTarget) {
+      if (currentFile === 'stay.html') {
+        activeTarget = 'stay.html';
+      } else if (currentFile === 'detail-unit.html') {
+        activeTarget = 'detail-unit.html';
+      } else {
+        // on index.html
+        const hash = window.location.hash.replace('#', '').toLowerCase();
+        if (hash === 'filosofi') {
+          activeTarget = 'filosofi';
+        } else if (hash === 'pengalaman') {
+          activeTarget = 'pengalaman';
+        } else {
+          activeTarget = getActiveSectionFromScroll();
+        }
+      }
+    }
+
+    currentActiveTarget = activeTarget;
+
     const navLinks = document.querySelectorAll('#fullscreenNav [data-nav-item]');
     navLinks.forEach((link) => {
-      const targetFile = link.getAttribute('data-nav-item');
-      const isMatch = targetFile === currentFile || 
-                     (targetFile === 'index.html' && (currentFile === '' || currentFile === 'index.html'));
+      const target = link.getAttribute('data-nav-item');
+      const isMatch = (target === activeTarget) || 
+                      (target === 'index.html' && (!activeTarget || activeTarget === 'index.html'));
 
       const activeBadge = link.querySelector('.nav-active-badge');
       const linkLabel = link.querySelector('.nav-text-label');
+      const numberSpan = link.querySelector('.nav-num') || link.querySelector('span:first-child');
 
       if (isMatch) {
         link.classList.add('text-brass');
         link.classList.remove('text-stone-900', 'dark:text-stone-100');
         if (linkLabel) linkLabel.classList.add('font-semibold');
+        if (numberSpan) {
+          numberSpan.classList.add('text-brass', 'font-semibold');
+          numberSpan.classList.remove('text-stone-400');
+        }
         if (activeBadge) activeBadge.classList.remove('hidden');
       } else {
         link.classList.remove('text-brass');
         link.classList.add('text-stone-900', 'dark:text-stone-100');
         if (linkLabel) linkLabel.classList.remove('font-semibold');
+        if (numberSpan) {
+          numberSpan.classList.remove('text-brass', 'font-semibold');
+          numberSpan.classList.add('text-stone-400');
+        }
         if (activeBadge) activeBadge.classList.add('hidden');
       }
     });
@@ -184,6 +269,24 @@
     applyLang(getPreferredLang());
     updateThemeToggleIcons(document.documentElement.classList.contains('dark'));
     highlightActiveMenu();
+    updateWhatsAppLink();
+
+    // Listen to hash changes (e.g. #filosofi, #pengalaman)
+    window.addEventListener('hashchange', () => {
+      highlightActiveMenu();
+    });
+
+    // Scroll spy for index.html
+    const currentPath = window.location.pathname.toLowerCase();
+    let currentFile = currentPath.substring(currentPath.lastIndexOf('/') + 1);
+    if (!currentFile || currentFile === '' || currentFile === 'index.html') {
+      window.addEventListener('scroll', () => {
+        const detected = getActiveSectionFromScroll();
+        if (detected && detected !== currentActiveTarget && !window.location.hash) {
+          highlightActiveMenu(detected);
+        }
+      }, { passive: true });
+    }
 
     // Bind Language switchers
     const langBtns = document.querySelectorAll('[data-lang-btn]');
@@ -212,6 +315,7 @@
 
     function openMenu() {
       if (!fullscreenNav) return;
+      highlightActiveMenu(); // update highlight when menu opens
       fullscreenNav.classList.add('is-active');
       document.body.classList.add('overflow-hidden');
       menuToggleBtns.forEach((btn) => btn.classList.add('menu-open'));
@@ -237,9 +341,11 @@
     });
 
     if (fullscreenNav) {
-      const navLinks = fullscreenNav.querySelectorAll('a');
+      const navLinks = fullscreenNav.querySelectorAll('[data-nav-item]');
       navLinks.forEach((link) => {
         link.addEventListener('click', () => {
+          const target = link.getAttribute('data-nav-item');
+          highlightActiveMenu(target);
           closeMenu();
         });
       });
